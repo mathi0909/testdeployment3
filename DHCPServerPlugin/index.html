@@ -70,6 +70,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.DHCP_Server_Plugin"></a></p>
 <h1 id="dhcp-server-plugin">DHCP Server Plugin</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -337,7 +338,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DHCPServer.1.activate&quot;,
@@ -346,13 +347,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.deactivate"></a></p>
 <h2 id="deactivate-method"><em>deactivate <sup>method</sup></em></h2>
 <p>Deactivates a DHCP server.</p>
@@ -424,7 +427,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DHCPServer.1.deactivate&quot;,
@@ -433,13 +436,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_1">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the DHCPServer plugin:</p>
@@ -558,14 +563,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DHCPServer.1.status@eth0&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [

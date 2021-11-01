@@ -67,6 +67,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.BrowserSecurity_API"></a></p>
 <h1 id="browsersecurity-api">BrowserSecurity API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -205,34 +206,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BrowserSecurity.1.securityprofile&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;compatible&quot;
 }
 </code></pre>
+
 <h4 id="set-request">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BrowserSecurity.1.securityprofile&quot;,
     &quot;params&quot;: &quot;compatible&quot;
 }
 </code></pre>
+
 <h4 id="set-response">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.mixedcontentpolicy"></a></p>
 <h2 id="mixedcontentpolicy-property"><em>mixedcontentpolicy <sup>property</sup></em></h2>
 <p>Provides access to the mixed content policy.</p>
@@ -255,29 +260,32 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BrowserSecurity.1.mixedcontentpolicy&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;allowed&quot;
 }
 </code></pre>
+
 <h4 id="set-request_1">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BrowserSecurity.1.mixedcontentpolicy&quot;,
     &quot;params&quot;: &quot;allowed&quot;
 }
 </code></pre>
+
 <h4 id="set-response_1">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;

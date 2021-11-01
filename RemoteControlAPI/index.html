@@ -83,6 +83,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.Remote_Control_API"></a></p>
 <h1 id="remote-control-api">Remote Control API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -333,7 +334,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.key&quot;,
@@ -343,8 +344,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -356,6 +358,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="method.send"></a></p>
 <h2 id="send-method"><em>send <sup>method</sup></em></h2>
 <p>Sends a key to a device (press and release).</p>
@@ -442,7 +445,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.send&quot;,
@@ -452,13 +455,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_1">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.press"></a></p>
 <h2 id="press-method"><em>press <sup>method</sup></em></h2>
 <p>Presses a key on a device.</p>
@@ -540,7 +545,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="request_2">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.press&quot;,
@@ -550,13 +555,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_2">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.release"></a></p>
 <h2 id="release-method"><em>release <sup>method</sup></em></h2>
 <p>Releases a key on a device.</p>
@@ -643,7 +650,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="request_3">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.release&quot;,
@@ -653,13 +660,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_3">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.add"></a></p>
 <h2 id="add-method"><em>add <sup>method</sup></em></h2>
 <p>Adds a key code to the key map.</p>
@@ -751,7 +760,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="request_4">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.add&quot;,
@@ -765,13 +774,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_4">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.modify"></a></p>
 <h2 id="modify-method"><em>modify <sup>method</sup></em></h2>
 <p>Modifies a key code in the key map.</p>
@@ -863,7 +874,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="request_5">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.modify&quot;,
@@ -877,13 +888,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_5">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.delete"></a></p>
 <h2 id="delete-method"><em>delete <sup>method</sup></em></h2>
 <p>Deletes a key code from the key map.</p>
@@ -960,7 +973,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_6">Example</h3>
 <h4 id="request_6">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.delete&quot;,
@@ -970,13 +983,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_6">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.load"></a></p>
 <h2 id="load-method"><em>load <sup>method</sup></em></h2>
 <p>Re-loads the device's key map from persistent memory.</p>
@@ -1058,7 +1073,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_7">Example</h3>
 <h4 id="request_7">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.load&quot;,
@@ -1067,13 +1082,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_7">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.save"></a></p>
 <h2 id="save-method"><em>save <sup>method</sup></em></h2>
 <p>Saves the device's key map into persistent path.</p>
@@ -1150,7 +1167,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_8">Example</h3>
 <h4 id="request_8">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.save&quot;,
@@ -1159,13 +1176,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_8">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.pair"></a></p>
 <h2 id="pair-method"><em>pair <sup>method</sup></em></h2>
 <p>Activates pairing mode of a device.</p>
@@ -1237,7 +1256,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_9">Example</h3>
 <h4 id="request_9">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.pair&quot;,
@@ -1246,13 +1265,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_9">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.unpair"></a></p>
 <h2 id="unpair-method"><em>unpair <sup>method</sup></em></h2>
 <p>Unpairs a device.</p>
@@ -1329,7 +1350,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_10">Example</h3>
 <h4 id="request_10">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.unpair&quot;,
@@ -1339,13 +1360,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_10">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the RemoteControl interface:</p>
@@ -1398,14 +1421,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_11">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.devices&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1413,6 +1437,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.device"></a></p>
 <h2 id="device-property"><em>device <sup>property</sup></em></h2>
 <p>Provides access to the metadata of a specific device.</p>
@@ -1473,14 +1498,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_12">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;RemoteControl.1.device@DevInput&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -1488,6 +1514,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="head.Notifications"></a></p>
 <h1 id="notifications">Notifications</h1>
 <p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
@@ -1536,7 +1563,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>The <em>key code</em> argument shall be passed within the designator, e.g. <em>42.client.events.1</em>.</p>
 </blockquote>
 <h3 id="example_13">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;42.client.events.1.keypressed&quot;,
     &quot;params&quot;: {

@@ -71,6 +71,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.Test_Controller_API"></a></p>
 <h1 id="test-controller-api">Test Controller API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -275,7 +276,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestController.1.run&quot;,
@@ -286,8 +287,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -298,6 +300,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the TestController interface:</p>
@@ -354,14 +357,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestController.1.categories&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -369,6 +373,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.tests"></a></p>
 <h2 id="tests-property"><em>tests <sup>property</sup></em></h2>
 <p>Provides access to the list of tests for a category.</p>
@@ -424,14 +429,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestController.1.tests@JSONRPC&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -439,6 +445,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.description"></a></p>
 <h2 id="description-property"><em>description <sup>property</sup></em></h2>
 <p>Provides access to the description of a test.</p>
@@ -494,14 +501,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestController.1.description@JSONRPC&quot;
 }
 </code></pre>
+
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {

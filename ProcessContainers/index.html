@@ -73,6 +73,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.Process_Containers"></a></p>
 <h1 id="process-containers">Process Containers</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -271,7 +272,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Containers.1.start&quot;,
@@ -284,13 +285,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.stop"></a></p>
 <h2 id="stop-method"><em>stop <sup>method</sup></em></h2>
 <p>Stops a container.</p>
@@ -352,7 +355,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Containers.1.stop&quot;,
@@ -361,13 +364,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_1">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the Containers interface:</p>
@@ -428,14 +433,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Containers.1.containers&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -443,6 +449,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.networks"></a></p>
 <h2 id="networks-property"><em>networks <sup>property</sup></em></h2>
 <p>Provides access to the list of network interfaces of the container.</p>
@@ -508,14 +515,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Containers.1.networks@ContainerName&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -528,6 +536,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.memory"></a></p>
 <h2 id="memory-property"><em>memory <sup>property</sup></em></h2>
 <p>Provides access to the memory taken by container.</p>
@@ -588,14 +597,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Containers.1.memory@ContainerName&quot;
 }
 </code></pre>
+
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -605,6 +615,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="property.cpu"></a></p>
 <h2 id="cpu-property"><em>cpu <sup>property</sup></em></h2>
 <p>Provides access to the CPU time.</p>
@@ -665,14 +676,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="get-request_3">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Containers.1.cpu@ContainerName&quot;
 }
 </code></pre>
+
 <h4 id="get-response_3">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {

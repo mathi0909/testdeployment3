@@ -79,6 +79,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.Spark_Plugin"></a></p>
 <h1 id="spark-plugin">Spark Plugin</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -302,7 +303,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Spark.1.delete&quot;,
@@ -311,13 +312,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the Spark plugin:</p>
@@ -399,34 +402,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Spark.1.url&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;https://www.google.com&quot;
 }
 </code></pre>
+
 <h4 id="set-request">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Spark.1.url&quot;,
     &quot;params&quot;: &quot;https://www.google.com&quot;
 }
 </code></pre>
+
 <h4 id="set-response">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.visibility"></a></p>
 <h2 id="visibility-property"><em>visibility <sup>property</sup></em></h2>
 <p>Provides access to the current browser visibility.</p>
@@ -467,34 +474,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Spark.1.visibility&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;visible&quot;
 }
 </code></pre>
+
 <h4 id="set-request_1">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Spark.1.visibility&quot;,
     &quot;params&quot;: &quot;visible&quot;
 }
 </code></pre>
+
 <h4 id="set-response_1">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.fps"></a></p>
 <h2 id="fps-property"><em>fps <sup>property</sup></em></h2>
 <p>Provides access to the current number of frames per second the browser is rendering.</p>
@@ -520,19 +531,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Spark.1.fps&quot;
 }
 </code></pre>
+
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 30
 }
 </code></pre>
+
 <p><a name="property.state"></a></p>
 <h2 id="state-property"><em>state <sup>property</sup></em></h2>
 <p>Provides access to the running state of the service.</p>
@@ -556,34 +569,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="get-request_3">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Spark.1.state&quot;
 }
 </code></pre>
+
 <h4 id="get-response_3">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;resumed&quot;
 }
 </code></pre>
+
 <h4 id="set-request_2">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Spark.1.state&quot;,
     &quot;params&quot;: &quot;resumed&quot;
 }
 </code></pre>
+
 <h4 id="set-response_2">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="head.Notifications"></a></p>
 <h1 id="notifications">Notifications</h1>
 <p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
@@ -653,7 +670,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_5">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.urlchange&quot;,
     &quot;params&quot;: {
@@ -662,6 +679,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.visibilitychange"></a></p>
 <h2 id="visibilitychange-event"><em>visibilitychange <sup>event</sup></em></h2>
 <p>Signals a visibility change of the browser.</p>
@@ -688,7 +706,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_6">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.visibilitychange&quot;,
     &quot;params&quot;: {
@@ -696,6 +714,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.statechange"></a></p>
 <h2 id="statechange-event"><em>statechange <sup>event</sup></em></h2>
 <p>Signals a state change of the service.</p>
@@ -722,7 +741,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_7">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.statechange&quot;,
     &quot;params&quot;: {

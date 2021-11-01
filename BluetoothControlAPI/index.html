@@ -89,6 +89,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.Bluetooth_Control_API"></a></p>
 <h1 id="bluetooth-control-api">Bluetooth Control API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -316,7 +317,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.scan&quot;,
@@ -327,13 +328,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.stopscanning"></a></p>
 <h2 id="stopscanning-method"><em>stopscanning <sup>method</sup></em></h2>
 <p>Stops scanning procedure.</p>
@@ -381,19 +384,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.stopscanning&quot;
 }
 </code></pre>
+
 <h4 id="response_1">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.connect"></a></p>
 <h2 id="connect-method"><em>connect <sup>method</sup></em></h2>
 <p>Connects to a Bluetooth device.</p>
@@ -478,7 +483,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="request_2">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.connect&quot;,
@@ -487,13 +492,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_2">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.disconnect"></a></p>
 <h2 id="disconnect-method"><em>disconnect <sup>method</sup></em></h2>
 <p>Disconnects from a connected Bluetooth device.</p>
@@ -568,7 +575,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="request_3">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.disconnect&quot;,
@@ -577,13 +584,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_3">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.pair"></a></p>
 <h2 id="pair-method"><em>pair <sup>method</sup></em></h2>
 <p>Pairs a Bluetooth device.</p>
@@ -663,7 +672,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="request_4">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.pair&quot;,
@@ -673,13 +682,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_4">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.unpair"></a></p>
 <h2 id="unpair-method"><em>unpair <sup>method</sup></em></h2>
 <p>Unpairs a paired Bluetooth device.</p>
@@ -747,7 +758,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="request_5">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.unpair&quot;,
@@ -756,13 +767,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_5">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.abortpairing"></a></p>
 <h2 id="abortpairing-method"><em>abortpairing <sup>method</sup></em></h2>
 <p>Aborts the pairing process.</p>
@@ -829,7 +842,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_6">Example</h3>
 <h4 id="request_6">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.abortpairing&quot;,
@@ -838,13 +851,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_6">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.pincode"></a></p>
 <h2 id="pincode-method"><em>pincode <sup>method</sup></em></h2>
 <p>Specifies a PIN code for authentication during a legacy pairing process.</p>
@@ -919,7 +934,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_7">Example</h3>
 <h4 id="request_7">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.pincode&quot;,
@@ -929,13 +944,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_7">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.passkey"></a></p>
 <h2 id="passkey-method"><em>passkey <sup>method</sup></em></h2>
 <p>Specifies a passkey for authentication during a pairing process.</p>
@@ -1010,7 +1027,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_8">Example</h3>
 <h4 id="request_8">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.passkey&quot;,
@@ -1020,13 +1037,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_8">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.confirmpasskey"></a></p>
 <h2 id="confirmpasskey-method"><em>confirmpasskey <sup>method</sup></em></h2>
 <p>Confirms a passkey for authentication during a pairing process.</p>
@@ -1101,7 +1120,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_9">Example</h3>
 <h4 id="request_9">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.confirmpasskey&quot;,
@@ -1111,13 +1130,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_9">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the BluetoothControl interface:</p>
@@ -1178,14 +1199,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_10">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.adapters&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1193,6 +1215,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.adapter"></a></p>
 <h2 id="adapter-property"><em>adapter <sup>property</sup></em></h2>
 <p>Provides access to the local Bluetooth adapter information.</p>
@@ -1268,14 +1291,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_11">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.adapter@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -1288,6 +1312,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="property.devices"></a></p>
 <h2 id="devices-property"><em>devices <sup>property</sup></em></h2>
 <p>Provides access to the list of known remote Bluetooth devices.</p>
@@ -1318,14 +1343,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_12">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.devices&quot;
 }
 </code></pre>
+
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1333,6 +1359,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.device"></a></p>
 <h2 id="device-property"><em>device <sup>property</sup></em></h2>
 <p>Provides access to the remote Bluetooth device information.</p>
@@ -1403,14 +1430,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_13">Example</h3>
 <h4 id="get-request_3">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;BluetoothControl.1.device@81:6F:B0:91:9B:FE&quot;
 }
 </code></pre>
+
 <h4 id="get-response_3">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -1422,6 +1450,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="head.Notifications"></a></p>
 <h1 id="notifications">Notifications</h1>
 <p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
@@ -1469,11 +1498,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="parameters_10">Parameters</h3>
 <p>This event carries no parameters.</p>
 <h3 id="example_14">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.scanstarted&quot;
 }
 </code></pre>
+
 <p><a name="event.scancomplete"></a></p>
 <h2 id="scancomplete-event"><em>scancomplete <sup>event</sup></em></h2>
 <p>Notifies about scan completion.</p>
@@ -1482,11 +1512,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="parameters_11">Parameters</h3>
 <p>This event carries no parameters.</p>
 <h3 id="example_15">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.scancomplete&quot;
 }
 </code></pre>
+
 <p><a name="event.devicestatechange"></a></p>
 <h2 id="devicestatechange-event"><em>devicestatechange <sup>event</sup></em></h2>
 <p>Notifies about device state change.</p>
@@ -1525,7 +1556,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_16">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.devicestatechange&quot;,
     &quot;params&quot;: {
@@ -1535,6 +1566,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.pincoderequest"></a></p>
 <h2 id="pincoderequest-event"><em>pincoderequest <sup>event</sup></em></h2>
 <p>Notifies about a PIN code request.</p>
@@ -1563,7 +1595,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_17">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.pincoderequest&quot;,
     &quot;params&quot;: {
@@ -1571,6 +1603,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.passkeyrequest"></a></p>
 <h2 id="passkeyrequest-event"><em>passkeyrequest <sup>event</sup></em></h2>
 <p>Notifies about a passkey request.</p>
@@ -1599,7 +1632,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_18">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.passkeyrequest&quot;,
     &quot;params&quot;: {
@@ -1607,6 +1640,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.passkeyconfirmrequest"></a></p>
 <h2 id="passkeyconfirmrequest-event"><em>passkeyconfirmrequest <sup>event</sup></em></h2>
 <p>Notifies about a passkey confirmation request.</p>
@@ -1640,7 +1674,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_19">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.passkeyconfirmrequest&quot;,
     &quot;params&quot;: {

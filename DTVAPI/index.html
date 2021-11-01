@@ -86,6 +86,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.DTV_API"></a></p>
 <h1 id="dtv-api">DTV API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -329,7 +330,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.addLnb&quot;,
@@ -351,13 +352,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: true
 }
 </code></pre>
+
 <p><a name="method.addSatellite"></a></p>
 <h2 id="addsatellite-method"><em>addSatellite <sup>method</sup></em></h2>
 <p>Add a new satellite to the database.</p>
@@ -412,7 +415,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.addSatellite&quot;,
@@ -423,13 +426,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_1">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: true
 }
 </code></pre>
+
 <p><a name="method.startServiceSearch"></a></p>
 <h2 id="startservicesearch-method"><em>startServiceSearch <sup>method</sup></em></h2>
 <p>Starts a service search.</p>
@@ -550,7 +555,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="request_2">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.startServiceSearch&quot;,
@@ -576,13 +581,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_2">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: true
 }
 </code></pre>
+
 <p><a name="method.finishServiceSearch"></a></p>
 <h2 id="finishservicesearch-method"><em>finishServiceSearch <sup>method</sup></em></h2>
 <h3 id="parameters_3">Parameters</h3>
@@ -631,7 +638,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="request_3">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.finishServiceSearch&quot;,
@@ -641,13 +648,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_3">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: true
 }
 </code></pre>
+
 <p><a name="method.startPlaying"></a></p>
 <h2 id="startplaying-method"><em>startPlaying <sup>method</sup></em></h2>
 <h3 id="parameters_4">Parameters</h3>
@@ -696,7 +705,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="request_4">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.startPlaying&quot;,
@@ -706,13 +715,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_4">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 0
 }
 </code></pre>
+
 <p><a name="method.stopPlaying"></a></p>
 <h2 id="stopplaying-method"><em>stopPlaying <sup>method</sup></em></h2>
 <h3 id="parameters_5">Parameters</h3>
@@ -751,20 +762,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="request_5">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.stopPlaying&quot;,
     &quot;params&quot;: 0
 }
 </code></pre>
+
 <h4 id="response_5">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the DTV interface:</p>
@@ -844,19 +857,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_6">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.numberOfCountries&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 5
 }
 </code></pre>
+
 <p><a name="property.countryList"></a></p>
 <h2 id="countrylist-property"><em>countryList <sup>property</sup></em></h2>
 <p>Provides access to the returns an array containing the name and 3 character ISO country code for all the available country configurations.</p>
@@ -897,14 +912,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_7">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.countryList&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -915,6 +931,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.country"></a></p>
 <h2 id="country-property"><em>country <sup>property</sup></em></h2>
 <p>Provides access to the get and set the configured country using the ISO 3-character country code.</p>
@@ -937,34 +954,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_8">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.country&quot;
 }
 </code></pre>
+
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 6775410
 }
 </code></pre>
+
 <h4 id="set-request">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.country&quot;,
     &quot;params&quot;: 6775410
 }
 </code></pre>
+
 <h4 id="set-response">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.lnbList"></a></p>
 <h2 id="lnblist-property"><em>lnbList <sup>property</sup></em></h2>
 <p>Provides access to the returns the array of LNBs defined in the database.</p>
@@ -1065,14 +1086,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_9">Example</h3>
 <h4 id="get-request_3">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.lnbList&quot;
 }
 </code></pre>
+
 <h4 id="get-response_3">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1095,6 +1117,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.satelliteList"></a></p>
 <h2 id="satellitelist-property"><em>satelliteList <sup>property</sup></em></h2>
 <p>Provides access to the returns the array of satellites defined in the database.</p>
@@ -1140,14 +1163,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_10">Example</h3>
 <h4 id="get-request_4">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.satelliteList&quot;
 }
 </code></pre>
+
 <h4 id="get-response_4">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1159,6 +1183,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.numberOfServices"></a></p>
 <h2 id="numberofservices-property"><em>numberOfServices <sup>property</sup></em></h2>
 <p>Provides access to the returns the total number of services in the service database.</p>
@@ -1184,19 +1209,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_11">Example</h3>
 <h4 id="get-request_5">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.numberOfServices&quot;
 }
 </code></pre>
+
 <h4 id="get-response_5">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 145
 }
 </code></pre>
+
 <p><a name="property.serviceList"></a></p>
 <h2 id="servicelist-property"><em>serviceList <sup>property</sup></em></h2>
 <p>Provides access to the returns the list of services for the given type of tuner, or all services if no tuner is defined.</p>
@@ -1245,14 +1272,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </blockquote>
 <h3 id="example_12">Example</h3>
 <h4 id="get-request_6">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.serviceList@dvbs&quot;
 }
 </code></pre>
+
 <h4 id="get-response_6">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1264,6 +1292,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.nowNextEvents"></a></p>
 <h2 id="nownextevents-property"><em>nowNextEvents <sup>property</sup></em></h2>
 <p>Provides access to the get the now and next events (EITp/f) for the given service.</p>
@@ -1352,14 +1381,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </blockquote>
 <h3 id="example_13">Example</h3>
 <h4 id="get-request_7">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.nowNextEvents@9018.4161.1001&quot;
 }
 </code></pre>
+
 <h4 id="get-response_7">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -1380,6 +1410,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="property.scheduleEvents"></a></p>
 <h2 id="scheduleevents-property"><em>scheduleEvents <sup>property</sup></em></h2>
 <p>Provides access to the get the schedule events (EITsched) for the given service.</p>
@@ -1438,14 +1469,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </blockquote>
 <h3 id="example_14">Example</h3>
 <h4 id="get-request_8">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.scheduleEvents@9018.4161.1001:12345000,12346000&quot;
 }
 </code></pre>
+
 <h4 id="get-response_8">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1459,6 +1491,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.status"></a></p>
 <h2 id="status-property"><em>status <sup>property</sup></em></h2>
 <p>Provides access to the returns information related to the play handle defined by the index.</p>
@@ -1512,14 +1545,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </blockquote>
 <h3 id="example_15">Example</h3>
 <h4 id="get-request_9">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;DTV.1.status@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_9">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -1531,6 +1565,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="head.Notifications"></a></p>
 <h1 id="notifications">Notifications</h1>
 <p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
@@ -1591,7 +1626,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_16">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.searchstatus&quot;,
     &quot;params&quot;: {

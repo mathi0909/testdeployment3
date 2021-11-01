@@ -78,6 +78,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.Compositor_Plugin"></a></p>
 <h1 id="compositor-plugin">Compositor Plugin</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -358,7 +359,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.putontop&quot;,
@@ -367,13 +368,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.putbelow"></a></p>
 <h2 id="putbelow-method"><em>putbelow <sup>method</sup></em></h2>
 <p>Puts client surface below another surface.</p>
@@ -442,7 +445,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.putbelow&quot;,
@@ -452,13 +455,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_1">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.select"></a></p>
 <h2 id="select-method"><em>select <sup>method</sup></em></h2>
 <p>Directs the input to the given client, disabling all the others.</p>
@@ -522,7 +527,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="request_2">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.select&quot;,
@@ -531,13 +536,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_2">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the Compositor plugin:</p>
@@ -627,34 +634,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.resolution&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;1080p24&quot;
 }
 </code></pre>
+
 <h4 id="set-request">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.resolution&quot;,
     &quot;params&quot;: &quot;1080p24&quot;
 }
 </code></pre>
+
 <h4 id="set-response">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.zorder"></a></p>
 <h2 id="zorder-property"><em>zorder <sup>property</sup></em></h2>
 <p>Provides access to the list of compositor clients sorted by z-order.</p>
@@ -704,14 +715,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.zorder&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -719,6 +731,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.brightness"></a></p>
 <h2 id="brightness-property"><em>brightness <sup>property</sup></em></h2>
 <p>Provides access to the brightness of SDR graphics in HDR display.</p>
@@ -770,34 +783,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.brightness&quot;
 }
 </code></pre>
+
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;match_video&quot;
 }
 </code></pre>
+
 <h4 id="set-request_1">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.brightness&quot;,
     &quot;params&quot;: &quot;match_video&quot;
 }
 </code></pre>
+
 <h4 id="set-response_1">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.geometry"></a></p>
 <h2 id="geometry-property"><em>geometry <sup>property</sup></em></h2>
 <p>Provides access to the client surface geometry.</p>
@@ -862,14 +879,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_6">Example</h3>
 <h4 id="get-request_3">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.geometry@Netflix&quot;
 }
 </code></pre>
+
 <h4 id="get-response_3">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -880,8 +898,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="set-request_2">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.geometry@Netflix&quot;,
@@ -893,13 +912,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="set-response_2">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.visiblity"></a></p>
 <h2 id="visiblity-property"><em>visiblity <sup>property</sup></em></h2>
 <p>Provides access to the client surface visibility.</p>
@@ -947,20 +968,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_7">Example</h3>
 <h4 id="set-request_3">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.visiblity@Netflix&quot;,
     &quot;params&quot;: &quot;visible&quot;
 }
 </code></pre>
+
 <h4 id="set-response_3">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.opacity"></a></p>
 <h2 id="opacity-property"><em>opacity <sup>property</sup></em></h2>
 <p>Provides access to the client surface opacity.</p>
@@ -1008,15 +1031,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_8">Example</h3>
 <h4 id="set-request_4">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Compositor.1.opacity@Netflix&quot;,
     &quot;params&quot;: 127
 }
 </code></pre>
+
 <h4 id="set-response_4">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;

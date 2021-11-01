@@ -83,6 +83,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.WebBrowser_API"></a></p>
 <h1 id="webbrowser-api">WebBrowser API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -221,19 +222,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.collectgarbage&quot;
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the WebBrowser interface:</p>
@@ -302,34 +305,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.url&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;https://example.com&quot;
 }
 </code></pre>
+
 <h4 id="set-request">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.url&quot;,
     &quot;params&quot;: &quot;https://example.com&quot;
 }
 </code></pre>
+
 <h4 id="set-response">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.visibility"></a></p>
 <h2 id="visibility-property"><em>visibility <sup>property</sup></em></h2>
 <p>Provides access to the browser window visibility state.</p>
@@ -352,34 +359,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.visibility&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;hidden&quot;
 }
 </code></pre>
+
 <h4 id="set-request_1">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.visibility&quot;,
     &quot;params&quot;: &quot;hidden&quot;
 }
 </code></pre>
+
 <h4 id="set-response_1">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.fps"></a></p>
 <h2 id="fps-property"><em>fps <sup>property</sup></em></h2>
 <p>Provides access to the current framerate the browser is rendering at.</p>
@@ -405,19 +416,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.fps&quot;
 }
 </code></pre>
+
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 0
 }
 </code></pre>
+
 <p><a name="property.useragent"></a></p>
 <h2 id="useragent-property"><em>useragent <sup>property</sup></em></h2>
 <p>Provides access to the userAgent string used by the browser.</p>
@@ -440,34 +453,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="get-request_3">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.useragent&quot;
 }
 </code></pre>
+
 <h4 id="get-response_3">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;Mozilla/5.0 (Linux; x86_64 GNU/Linux) AppleWebKit/601.1 (KHTML, like Gecko) Version/8.0 Safari/601.1 WP&quot;
 }
 </code></pre>
+
 <h4 id="set-request_2">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.useragent&quot;,
     &quot;params&quot;: &quot;Mozilla/5.0 (Linux; x86_64 GNU/Linux) AppleWebKit/601.1 (KHTML, like Gecko) Version/8.0 Safari/601.1 WP&quot;
 }
 </code></pre>
+
 <h4 id="set-response_2">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.localstorageenabled"></a></p>
 <h2 id="localstorageenabled-property"><em>localstorageenabled <sup>property</sup></em></h2>
 <p>Provides access to the controls the local storage availability.</p>
@@ -490,34 +507,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="get-request_4">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.localstorageenabled&quot;
 }
 </code></pre>
+
 <h4 id="get-response_4">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: false
 }
 </code></pre>
+
 <h4 id="set-request_3">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.localstorageenabled&quot;,
     &quot;params&quot;: false
 }
 </code></pre>
+
 <h4 id="set-response_3">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.httpcookieacceptpolicy"></a></p>
 <h2 id="httpcookieacceptpolicy-property"><em>httpcookieacceptpolicy <sup>property</sup></em></h2>
 <p>Provides access to the HTTP cookies accept policy.</p>
@@ -540,34 +561,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_6">Example</h3>
 <h4 id="get-request_5">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.httpcookieacceptpolicy&quot;
 }
 </code></pre>
+
 <h4 id="get-response_5">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;always&quot;
 }
 </code></pre>
+
 <h4 id="set-request_4">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.httpcookieacceptpolicy&quot;,
     &quot;params&quot;: &quot;always&quot;
 }
 </code></pre>
+
 <h4 id="set-response_4">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.bridgereply"></a></p>
 <h2 id="bridgereply-property"><em>bridgereply <sup>property</sup></em></h2>
 <p>Provides access to the response for legacy $badger.</p>
@@ -593,20 +618,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_7">Example</h3>
 <h4 id="set-request_5">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.bridgereply&quot;,
     &quot;params&quot;: &quot;...&quot;
 }
 </code></pre>
+
 <h4 id="set-response_5">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.bridgeevent"></a></p>
 <h2 id="bridgeevent-property"><em>bridgeevent <sup>property</sup></em></h2>
 <p>Provides access to the send legacy $badger event.</p>
@@ -632,20 +659,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_8">Example</h3>
 <h4 id="set-request_6">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;WebBrowser.1.bridgeevent&quot;,
     &quot;params&quot;: &quot;...&quot;
 }
 </code></pre>
+
 <h4 id="set-response_6">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="head.Notifications"></a></p>
 <h1 id="notifications">Notifications</h1>
 <p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
@@ -712,7 +741,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_9">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.loadfinished&quot;,
     &quot;params&quot;: {
@@ -721,6 +750,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.loadfailed"></a></p>
 <h2 id="loadfailed-event"><em>loadfailed <sup>event</sup></em></h2>
 <p>Browser failed to load page.</p>
@@ -747,7 +777,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_10">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.loadfailed&quot;,
     &quot;params&quot;: {
@@ -755,6 +785,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.urlchange"></a></p>
 <h2 id="urlchange-event"><em>urlchange <sup>event</sup></em></h2>
 <p>Signals a URL change in the browser.</p>
@@ -786,7 +817,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_11">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.urlchange&quot;,
     &quot;params&quot;: {
@@ -795,6 +826,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.visibilitychange"></a></p>
 <h2 id="visibilitychange-event"><em>visibilitychange <sup>event</sup></em></h2>
 <p>Signals a visibility change of the browser.</p>
@@ -821,7 +853,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_12">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.visibilitychange&quot;,
     &quot;params&quot;: {
@@ -829,13 +861,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.pageclosure"></a></p>
 <h2 id="pageclosure-event"><em>pageclosure <sup>event</sup></em></h2>
 <p>Notifies that the web page requests to close its window.</p>
 <h3 id="parameters_5">Parameters</h3>
 <p>This event carries no parameters.</p>
 <h3 id="example_13">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.pageclosure&quot;
 }

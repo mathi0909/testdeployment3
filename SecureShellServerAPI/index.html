@@ -68,6 +68,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.SecureShell_Server_API"></a></p>
 <h1 id="secureshell-server-api">SecureShell Server API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -236,19 +237,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;SecureShellServer.1.get_active_sessions_count&quot;
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 0
 }
 </code></pre>
+
 <p><a name="method.get_active_sessions_info"></a></p>
 <h2 id="get_active_sessions_info-method"><em>get_active_sessions_info <sup>method</sup></em></h2>
 <p>Get details of currently active SSH client sessions maintained by SecureShell SSH Service.</p>
@@ -317,14 +320,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;SecureShellServer.1.get_active_sessions_info&quot;
 }
 </code></pre>
+
 <h4 id="response_1">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -336,6 +340,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="method.close_client_session"></a></p>
 <h2 id="close_client_session-method"><em>close_client_session <sup>method</sup></em></h2>
 <p>Close and active SSH client session.</p>
@@ -387,7 +392,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="request_2">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;SecureShellServer.1.close_client_session&quot;,

@@ -92,6 +92,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
+
 <p><a name="head.Streamer_Plugin"></a></p>
 <h1 id="streamer-plugin">Streamer Plugin</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -324,7 +325,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.create&quot;,
@@ -333,13 +334,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 0
 }
 </code></pre>
+
 <p><a name="method.destroy"></a></p>
 <h2 id="destroy-method"><em>destroy <sup>method</sup></em></h2>
 <p>Destroys a stream instance.</p>
@@ -401,7 +404,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.destroy&quot;,
@@ -410,13 +413,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_1">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.load"></a></p>
 <h2 id="load-method"><em>load <sup>method</sup></em></h2>
 <p>Loads a source into a stream.</p>
@@ -499,7 +504,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="request_2">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.load&quot;,
@@ -509,13 +514,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_2">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.attach"></a></p>
 <h2 id="attach-method"><em>attach <sup>method</sup></em></h2>
 <p>Attaches a decoder to the streamer.</p>
@@ -592,7 +599,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="request_3">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.attach&quot;,
@@ -601,13 +608,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_3">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="method.detach"></a></p>
 <h2 id="detach-method"><em>detach <sup>method</sup></em></h2>
 <p>Detaches a decoder from the streamer.</p>
@@ -679,7 +688,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="request_4">Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.detach&quot;,
@@ -688,13 +697,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="response_4">Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
+
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the Streamer plugin:</p>
@@ -803,34 +814,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.speed@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 100
 }
 </code></pre>
+
 <h4 id="set-request">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.speed@0&quot;,
     &quot;params&quot;: 100
 }
 </code></pre>
+
 <h4 id="set-response">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.position"></a></p>
 <h2 id="position-property"><em>position <sup>property</sup></em></h2>
 <p>Provides access to the stream position.</p>
@@ -878,34 +893,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_6">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.position@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 60000
 }
 </code></pre>
+
 <h4 id="set-request_1">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.position@0&quot;,
     &quot;params&quot;: 60000
 }
 </code></pre>
+
 <h4 id="set-response_1">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.window"></a></p>
 <h2 id="window-property"><em>window <sup>property</sup></em></h2>
 <p>Provides access to the stream playback window.</p>
@@ -973,14 +992,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_7">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.window@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -991,8 +1011,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="set-request_2">Set Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.window@0&quot;,
@@ -1004,13 +1025,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <h4 id="set-response_2">Set Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
+
 <p><a name="property.speeds"></a></p>
 <h2 id="speeds-property"><em>speeds <sup>property</sup></em></h2>
 <p>Provides access to the speeds supported by the stream player.</p>
@@ -1066,14 +1089,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_8">Example</h3>
 <h4 id="get-request_3">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.speeds@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_3">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1087,6 +1111,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.streams"></a></p>
 <h2 id="streams-property"><em>streams <sup>property</sup></em></h2>
 <p>Provides access to the all created stream instance IDs.</p>
@@ -1117,14 +1142,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_9">Example</h3>
 <h4 id="get-request_4">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.streams&quot;
 }
 </code></pre>
+
 <h4 id="get-response_4">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1135,6 +1161,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="property.type"></a></p>
 <h2 id="type-property"><em>type <sup>property</sup></em></h2>
 <p>Provides access to the type of a stream.</p>
@@ -1180,19 +1207,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_10">Example</h3>
 <h4 id="get-request_5">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.type@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_5">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;cable&quot;
 }
 </code></pre>
+
 <p><a name="property.drm"></a></p>
 <h2 id="drm-property"><em>drm <sup>property</sup></em></h2>
 <p>Provides access to the DRM type associated with a stream.</p>
@@ -1239,19 +1268,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_11">Example</h3>
 <h4 id="get-request_6">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.drm@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_6">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;clearkey&quot;
 }
 </code></pre>
+
 <p><a name="property.state"></a></p>
 <h2 id="state-property"><em>state <sup>property</sup></em></h2>
 <p>Provides access to the current state of a stream.</p>
@@ -1298,19 +1329,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_12">Example</h3>
 <h4 id="get-request_7">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.state@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_7">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;controlled&quot;
 }
 </code></pre>
+
 <p><a name="property.metadata"></a></p>
 <h2 id="metadata-property"><em>metadata <sup>property</sup></em></h2>
 <p>Provides access to the metadata associated with the stream.</p>
@@ -1356,19 +1389,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_13">Example</h3>
 <h4 id="get-request_8">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.metadata@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_8">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;...&quot;
 }
 </code></pre>
+
 <p><a name="property.error"></a></p>
 <h2 id="error-property"><em>error <sup>property</sup></em></h2>
 <p>Provides access to the most recent error code.</p>
@@ -1414,19 +1449,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_14">Example</h3>
 <h4 id="get-request_9">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.error@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_9">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: 0
 }
 </code></pre>
+
 <p><a name="property.elements"></a></p>
 <h2 id="elements-property"><em>elements <sup>property</sup></em></h2>
 <p>Provides access to the stream elements.</p>
@@ -1487,14 +1524,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_15">Example</h3>
 <h4 id="get-request_10">Get Request</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;Streamer.1.elements@0&quot;
 }
 </code></pre>
+
 <h4 id="get-response_10">Get Response</h4>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -1504,6 +1542,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
+
 <p><a name="head.Notifications"></a></p>
 <h1 id="notifications">Notifications</h1>
 <p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
@@ -1568,7 +1607,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>The <em>Stream ID</em> argument shall be passed within the designator, e.g. <em>0.client.events.1</em>.</p>
 </blockquote>
 <h3 id="example_16">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;0.client.events.1.statechange&quot;,
     &quot;params&quot;: {
@@ -1576,6 +1615,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.timeupdate"></a></p>
 <h2 id="timeupdate-event"><em>timeupdate <sup>event</sup></em></h2>
 <p>Notifies of stream position change. This event is fired every second to indicate the current stream position. It does not fire if the stream is paused (i.e. speed is set to 0).</p>
@@ -1605,7 +1645,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>The <em>Stream ID</em> argument shall be passed within the designator, e.g. <em>0.client.events.1</em>.</p>
 </blockquote>
 <h3 id="example_17">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;0.client.events.1.timeupdate&quot;,
     &quot;params&quot;: {
@@ -1613,6 +1653,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.stream"></a></p>
 <h2 id="stream-event"><em>stream <sup>event</sup></em></h2>
 <p>Notifies of a custom stream incident.</p>
@@ -1642,7 +1683,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>The <em>Stream ID</em> argument shall be passed within the designator, e.g. <em>0.client.events.1</em>.</p>
 </blockquote>
 <h3 id="example_18">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;0.client.events.1.stream&quot;,
     &quot;params&quot;: {
@@ -1650,6 +1691,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.player"></a></p>
 <h2 id="player-event"><em>player <sup>event</sup></em></h2>
 <p>Notifies of a custom player incident.</p>
@@ -1679,7 +1721,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>The <em>Stream ID</em> argument shall be passed within the designator, e.g. <em>0.client.events.1</em>.</p>
 </blockquote>
 <h3 id="example_19">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;0.client.events.1.player&quot;,
     &quot;params&quot;: {
@@ -1687,6 +1729,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
+
 <p><a name="event.drm"></a></p>
 <h2 id="drm-event"><em>drm <sup>event</sup></em></h2>
 <p>Notifies of a custom DRM-related incident.</p>
@@ -1716,7 +1759,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <p>The <em>Stream ID</em> argument shall be passed within the designator, e.g. <em>0.client.events.1</em>.</p>
 </blockquote>
 <h3 id="example_20">Example</h3>
-<pre><code class="language-json">{
+<pre><code class="json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;0.client.events.1.drm&quot;,
     &quot;params&quot;: {
