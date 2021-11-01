@@ -1,0 +1,15 @@
+site_name: Documentation
+site_url: https://mathi0909.github.io/testdeployment3/
+nav:
+    - 'Home': 'index.md'
+    - 'Interface doc': 
+        - 'AVSControllerAPI': 'AVSControllerAPI.md'
+        - 'AmazonPrimeAPI': 'AmazonPrimeAPI.md'
+        - 'ApplicationAPI': 'ApplicationAPI.md'
+    - 'Plugins doc':
+        - 'BluetoothControlPlugin': 'BluetoothControlPlugin.md'
+        - 'BluetoothRemoteControlPlugin': 'BluetoothRemoteControlPlugin.md'
+        - 'CobaltPlugin': 'CobaltPlugin.md'
+theme:
+    name: windmill
+    highlightjs: true
