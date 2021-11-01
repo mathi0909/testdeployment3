@@ -77,7 +77,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
-
 <p><a name="head.Network_Control_API"></a></p>
 <h1 id="network-control-api">Network Control API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -265,7 +264,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.reload&quot;,
@@ -274,15 +273,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <h4 id="response">Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
-
 <p><a name="method.request"></a></p>
 <h2 id="request-method"><em>request <sup>method</sup></em></h2>
 <p>Reloads a non-static network interface adapter.</p>
@@ -345,7 +342,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.request&quot;,
@@ -354,15 +351,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <h4 id="response_1">Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
-
 <p><a name="method.assign"></a></p>
 <h2 id="assign-method"><em>assign <sup>method</sup></em></h2>
 <p>Reloads a static network interface adapter.</p>
@@ -424,7 +419,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="request_2">Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.assign&quot;,
@@ -433,15 +428,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <h4 id="response_2">Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
-
 <p><a name="method.flush"></a></p>
 <h2 id="flush-method"><em>flush <sup>method</sup></em></h2>
 <p>Flushes a network interface adapter.</p>
@@ -503,7 +496,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="request_3">Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.flush&quot;,
@@ -512,15 +505,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <h4 id="response_3">Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
-
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the NetworkControl interface:</p>
@@ -634,15 +625,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.network@eth0&quot;
 }
 </code></pre>
-
 <h4 id="get-response">Get Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -660,9 +650,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
-
 <h4 id="set-request">Set Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.network@eth0&quot;,
@@ -681,15 +670,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
-
 <h4 id="set-response">Set Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
-
 <p><a name="property.dns"></a></p>
 <h2 id="dns-property"><em>dns <sup>property</sup></em></h2>
 <p>Provides access to the DNS addresses.</p>
@@ -717,15 +704,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.dns&quot;
 }
 </code></pre>
-
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -733,9 +719,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
-
 <h4 id="set-request_1">Set Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.dns&quot;,
@@ -744,15 +729,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
-
 <h4 id="set-response_1">Set Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
-
 <p><a name="property.up"></a></p>
 <h2 id="up-property"><em>up <sup>property</sup></em></h2>
 <p>Provides access to the interface up status.</p>
@@ -812,38 +795,34 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_6">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.up@eth0&quot;
 }
 </code></pre>
-
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: false
 }
 </code></pre>
-
 <h4 id="set-request_2">Set Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;NetworkControl.1.up@eth0&quot;,
     &quot;params&quot;: false
 }
 </code></pre>
-
 <h4 id="set-response_2">Set Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
 }
 </code></pre>
-
 <p><a name="head.Notifications"></a></p>
 <h1 id="notifications">Notifications</h1>
 <p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
@@ -899,7 +878,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </tbody>
 </table>
 <h3 id="example_7">Example</h3>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;method&quot;: &quot;client.events.1.connectionchange&quot;,
     &quot;params&quot;: {

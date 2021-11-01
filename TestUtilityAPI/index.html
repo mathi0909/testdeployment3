@@ -73,7 +73,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     
 
     <!-- Generated automatically, DO NOT EDIT! -->
-
 <p><a name="head.Test_Utility_API"></a></p>
 <h1 id="test-utility-api">Test Utility API</h1>
 <p><strong>Version: 1.0</strong></p>
@@ -277,7 +276,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example">Example</h3>
 <h4 id="request">Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestUtility.1.runmemory&quot;,
@@ -287,9 +286,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <h4 id="response">Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -299,7 +297,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <p><a name="method.runcrash"></a></p>
 <h2 id="runcrash-method"><em>runcrash <sup>method</sup></em></h2>
 <p>Runs a crash test command.</p>
@@ -376,7 +373,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_1">Example</h3>
 <h4 id="request_1">Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestUtility.1.runcrash&quot;,
@@ -387,15 +384,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <h4 id="response_1">Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: null
 }
 </code></pre>
-
 <p><a name="head.Properties"></a></p>
 <h1 id="properties">Properties</h1>
 <p>The following properties are provided by the TestUtility interface:</p>
@@ -456,15 +451,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_2">Example</h3>
 <h4 id="get-request">Get Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestUtility.1.commands&quot;
 }
 </code></pre>
-
 <h4 id="get-response">Get Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: [
@@ -472,7 +466,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     ]
 }
 </code></pre>
-
 <p><a name="property.description"></a></p>
 <h2 id="description-property"><em>description <sup>property</sup></em></h2>
 <p>Provides access to the description of a test command.</p>
@@ -528,15 +521,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_3">Example</h3>
 <h4 id="get-request_1">Get Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestUtility.1.description@Malloc&quot;
 }
 </code></pre>
-
 <h4 id="get-response_1">Get Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -544,7 +536,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <p><a name="property.parameters"></a></p>
 <h2 id="parameters-property"><em>parameters <sup>property</sup></em></h2>
 <p>Provides access to the parameters of a test command.</p>
@@ -640,15 +631,14 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_4">Example</h3>
 <h4 id="get-request_2">Get Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestUtility.1.parameters@Malloc&quot;
 }
 </code></pre>
-
 <h4 id="get-response_2">Get Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: {
@@ -667,7 +657,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     }
 }
 </code></pre>
-
 <p><a name="property.shutdowntimeout"></a></p>
 <h2 id="shutdowntimeout-property"><em>shutdowntimeout <sup>property</sup></em></h2>
 <p>Provides access to the timeout to be waited before deactivating the plugin.</p>
@@ -693,16 +682,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </table>
 <h3 id="example_5">Example</h3>
 <h4 id="set-request">Set Request</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;method&quot;: &quot;TestUtility.1.shutdowntimeout&quot;,
     &quot;params&quot;: 5000
 }
 </code></pre>
-
 <h4 id="set-response">Set Response</h4>
-<pre><code class="json">{
+<pre><code class="language-json">{
     &quot;jsonrpc&quot;: &quot;2.0&quot;,
     &quot;id&quot;: 42,
     &quot;result&quot;: &quot;null&quot;
