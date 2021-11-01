@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://mathi0909.github.io/testdeployment3/RemoteControlAPI/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>RemoteControlAPI - Documentation</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Remote Control API", url: "#_top", children: [
+              {title: "Table of Contents", url: "#table-of-contents" },
+          ]},
+          {title: "Introduction", url: "#introduction", children: [
+              {title: "Scope", url: "#scope" },
+              {title: "Case Sensitivity", url: "#case-sensitivity" },
+              {title: "Acronyms, Abbreviations and Terms", url: "#acronyms-abbreviations-and-terms" },
+              {title: "References", url: "#references" },
+          ]},
+          {title: "Description", url: "#description", children: [
+          ]},
+          {title: "Methods", url: "#methods", children: [
+              {title: "key method", url: "#key-method" },
+              {title: "send method", url: "#send-method" },
+              {title: "press method", url: "#press-method" },
+              {title: "release method", url: "#release-method" },
+              {title: "add method", url: "#add-method" },
+              {title: "modify method", url: "#modify-method" },
+              {title: "delete method", url: "#delete-method" },
+              {title: "load method", url: "#load-method" },
+              {title: "save method", url: "#save-method" },
+              {title: "pair method", url: "#pair-method" },
+              {title: "unpair method", url: "#unpair-method" },
+          ]},
+          {title: "Properties", url: "#properties", children: [
+              {title: "devices property", url: "#devices-property" },
+              {title: "device property", url: "#device-property" },
+          ]},
+          {title: "Notifications", url: "#notifications", children: [
+              {title: "keypressed event", url: "#keypressed-event" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <!-- Generated automatically, DO NOT EDIT! -->
+<p><a name="head.Remote_Control_API"></a></p>
+<h1 id="remote-control-api">Remote Control API</h1>
+<p><strong>Version: 1.0</strong></p>
+<p><strong>Status: :black_circle::white_circle::white_circle:</strong></p>
+<p>RemoteControl interface for Thunder framework.</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#head.Introduction">Introduction</a></li>
+<li><a href="#head.Description">Description</a></li>
+<li><a href="#head.Methods">Methods</a></li>
+<li><a href="#head.Properties">Properties</a></li>
+<li><a href="#head.Notifications">Notifications</a></li>
+</ul>
+<p><a name="head.Introduction"></a></p>
+<h1 id="introduction">Introduction</h1>
+<p><a name="head.Scope"></a></p>
+<h2 id="scope">Scope</h2>
+<p>This document describes purpose and functionality of the RemoteControl interface. It includes detailed specification about its methods and properties provided, as well as notifications sent.</p>
+<p><a name="head.Case_Sensitivity"></a></p>
+<h2 id="case-sensitivity">Case Sensitivity</h2>
+<p>All identifiers of the interfaces described in this document are case-sensitive. Thus, unless stated otherwise, all keywords, entities, properties, relations and actions should be treated as such.</p>
+<p><a name="head.Acronyms,_Abbreviations_and_Terms"></a></p>
+<h2 id="acronyms-abbreviations-and-terms">Acronyms, Abbreviations and Terms</h2>
+<p>The table below provides and overview of acronyms used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Acronym</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="acronym.API">API</a></td>
+<td align="left">Application Programming Interface</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.HTTP">HTTP</a></td>
+<td align="left">Hypertext Transfer Protocol</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON">JSON</a></td>
+<td align="left">JavaScript Object Notation; a data interchange format</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON-RPC">JSON-RPC</a></td>
+<td align="left">A remote procedure call protocol encoded in JSON</td>
+</tr>
+</tbody>
+</table>
+<p>The table below provides and overview of terms and abbreviations used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Term</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="term.callsign">callsign</a></td>
+<td align="left">The name given to an instance of a plugin. One plugin can be instantiated multiple times, but each instance the instance name, callsign, must be unique.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.References"></a></p>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Ref ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="ref.HTTP"><a href="http://www.w3.org/Protocols">HTTP</a></a></td>
+<td align="left">HTTP specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON-RPC"><a href="https://www.jsonrpc.org/specification">JSON-RPC</a></a></td>
+<td align="left">JSON-RPC 2.0 specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON"><a href="http://www.json.org/">JSON</a></a></td>
+<td align="left">JSON specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.Thunder"><a href="https://github.com/WebPlatformForEmbedded/Thunder/blob/master/doc/WPE%20-%20API%20-%20WPEFramework.docx">Thunder</a></a></td>
+<td align="left">Thunder API Reference</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.Description"></a></p>
+<h1 id="description">Description</h1>
+<p>RemoteControl JSON-RPC interface.</p>
+<p><a name="head.Methods"></a></p>
+<h1 id="methods">Methods</h1>
+<p>The following methods are provided by the RemoteControl interface:</p>
+<p>RemoteControl interface methods:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#method.key">key</a></td>
+<td align="left">Gets key code details</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.send">send</a></td>
+<td align="left">Sends a key to a device (press and release)</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.press">press</a></td>
+<td align="left">Presses a key on a device</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.release">release</a></td>
+<td align="left">Releases a key on a device</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.add">add</a></td>
+<td align="left">Adds a key code to the key map</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.modify">modify</a></td>
+<td align="left">Modifies a key code in the key map</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.delete">delete</a></td>
+<td align="left">Deletes a key code from the key map</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.load">load</a></td>
+<td align="left">Re-loads the device's key map from persistent memory</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.save">save</a></td>
+<td align="left">Saves the device's key map into persistent path</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.pair">pair</a></td>
+<td align="left">Activates pairing mode of a device</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.unpair">unpair</a></td>
+<td align="left">Unpairs a device</td>
+</tr>
+</tbody>
+</table>
+<p><a name="method.key"></a></p>
+<h2 id="key-method"><em>key <sup>method</sup></em></h2>
+<p>Gets key code details.</p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+<tr>
+<td align="left">params.code</td>
+<td align="left">number</td>
+<td align="left">Key code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">result.code</td>
+<td align="left">number</td>
+<td align="left">Key code</td>
+</tr>
+<tr>
+<td align="left">result.key</td>
+<td align="left">number</td>
+<td align="left">Key ingest value</td>
+</tr>
+<tr>
+<td align="left">result?.modifiers</td>
+<td align="left">array</td>
+<td align="left"><sup><em>(optional)</em></sup> List of key modifiers</td>
+</tr>
+<tr>
+<td align="left">result?.modifiers[#]</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Key modifier (must be one of the following: <em>leftshift</em>, <em>rightshift</em>, <em>leftalt</em>, <em>rightalt</em>, <em>leftctrl</em>, <em>rightctrl</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">Key does not exist</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.key&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;,
+        &quot;code&quot;: 1
+    }
+}
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: {
+        &quot;code&quot;: 1,
+        &quot;key&quot;: 103,
+        &quot;modifiers&quot;: [
+            &quot;leftshift&quot;
+        ]
+    }
+}
+</code></pre>
+<p><a name="method.send"></a></p>
+<h2 id="send-method"><em>send <sup>method</sup></em></h2>
+<p>Sends a key to a device (press and release).</p>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+<tr>
+<td align="left">params.code</td>
+<td align="left">number</td>
+<td align="left">Key code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_1">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_1">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">Key does not exist</td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left"><code>ERROR_UNKNOWN_TABLE</code></td>
+<td align="left">Key map table does not exist</td>
+</tr>
+<tr>
+<td align="left">36</td>
+<td align="left"><code>ERROR_ALREADY_RELEASED</code></td>
+<td align="left">Key is already released</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example</h3>
+<h4 id="request_1">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.send&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;,
+        &quot;code&quot;: 1
+    }
+}
+</code></pre>
+<h4 id="response_1">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.press"></a></p>
+<h2 id="press-method"><em>press <sup>method</sup></em></h2>
+<p>Presses a key on a device.</p>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+<tr>
+<td align="left">params.code</td>
+<td align="left">number</td>
+<td align="left">Key code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_2">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_2">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">Key does not exist</td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left"><code>ERROR_UNKNOWN_TABLE</code></td>
+<td align="left">Key map table does not exist</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_2">Example</h3>
+<h4 id="request_2">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.press&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;,
+        &quot;code&quot;: 1
+    }
+}
+</code></pre>
+<h4 id="response_2">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.release"></a></p>
+<h2 id="release-method"><em>release <sup>method</sup></em></h2>
+<p>Releases a key on a device.</p>
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+<tr>
+<td align="left">params.code</td>
+<td align="left">number</td>
+<td align="left">Key code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_3">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_3">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">Key does not exist</td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left"><code>ERROR_UNKNOWN_TABLE</code></td>
+<td align="left">Key map table does not exist</td>
+</tr>
+<tr>
+<td align="left">36</td>
+<td align="left"><code>ERROR_ALREADY_RELEASED</code></td>
+<td align="left">Key is already released</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_3">Example</h3>
+<h4 id="request_3">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.release&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;,
+        &quot;code&quot;: 1
+    }
+}
+</code></pre>
+<h4 id="response_3">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.add"></a></p>
+<h2 id="add-method"><em>add <sup>method</sup></em></h2>
+<p>Adds a key code to the key map.</p>
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+<tr>
+<td align="left">params.code</td>
+<td align="left">number</td>
+<td align="left">Key code</td>
+</tr>
+<tr>
+<td align="left">params.key</td>
+<td align="left">number</td>
+<td align="left">Key ingest value</td>
+</tr>
+<tr>
+<td align="left">params?.modifiers</td>
+<td align="left">array</td>
+<td align="left"><sup><em>(optional)</em></sup> List of key modifiers</td>
+</tr>
+<tr>
+<td align="left">params?.modifiers[#]</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Key modifier (must be one of the following: <em>leftshift</em>, <em>rightshift</em>, <em>leftalt</em>, <em>rightalt</em>, <em>leftctrl</em>, <em>rightctrl</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_4">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_4">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">Code already exists</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_4">Example</h3>
+<h4 id="request_4">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.add&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;,
+        &quot;code&quot;: 1,
+        &quot;key&quot;: 103,
+        &quot;modifiers&quot;: [
+            &quot;leftshift&quot;
+        ]
+    }
+}
+</code></pre>
+<h4 id="response_4">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.modify"></a></p>
+<h2 id="modify-method"><em>modify <sup>method</sup></em></h2>
+<p>Modifies a key code in the key map.</p>
+<h3 id="parameters_5">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+<tr>
+<td align="left">params.code</td>
+<td align="left">number</td>
+<td align="left">Key code</td>
+</tr>
+<tr>
+<td align="left">params.key</td>
+<td align="left">number</td>
+<td align="left">Key ingest value</td>
+</tr>
+<tr>
+<td align="left">params?.modifiers</td>
+<td align="left">array</td>
+<td align="left"><sup><em>(optional)</em></sup> List of key modifiers</td>
+</tr>
+<tr>
+<td align="left">params?.modifiers[#]</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Key modifier (must be one of the following: <em>leftshift</em>, <em>rightshift</em>, <em>leftalt</em>, <em>rightalt</em>, <em>leftctrl</em>, <em>rightctrl</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_5">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_5">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">Key does not exist</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_5">Example</h3>
+<h4 id="request_5">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.modify&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;,
+        &quot;code&quot;: 1,
+        &quot;key&quot;: 103,
+        &quot;modifiers&quot;: [
+            &quot;leftshift&quot;
+        ]
+    }
+}
+</code></pre>
+<h4 id="response_5">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.delete"></a></p>
+<h2 id="delete-method"><em>delete <sup>method</sup></em></h2>
+<p>Deletes a key code from the key map.</p>
+<h3 id="parameters_6">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+<tr>
+<td align="left">params.code</td>
+<td align="left">number</td>
+<td align="left">Key code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_6">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_6">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">Key does not exist</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_6">Example</h3>
+<h4 id="request_6">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.delete&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;,
+        &quot;code&quot;: 1
+    }
+}
+</code></pre>
+<h4 id="response_6">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.load"></a></p>
+<h2 id="load-method"><em>load <sup>method</sup></em></h2>
+<p>Re-loads the device's key map from persistent memory.</p>
+<h3 id="parameters_7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_7">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_7">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">File does not exist</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><code>ERROR_ILLEGAL_STATE</code></td>
+<td align="left">Illegal state</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><code>ERROR_OPENING_FAILED</code></td>
+<td align="left">Opening failed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_7">Example</h3>
+<h4 id="request_7">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.load&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;
+    }
+}
+</code></pre>
+<h4 id="response_7">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.save"></a></p>
+<h2 id="save-method"><em>save <sup>method</sup></em></h2>
+<p>Saves the device's key map into persistent path.</p>
+<h3 id="parameters_8">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_8">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_8">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">File is not created</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><code>ERROR_ILLEGAL_STATE</code></td>
+<td align="left">Illegal state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_8">Example</h3>
+<h4 id="request_8">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.save&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;
+    }
+}
+</code></pre>
+<h4 id="response_8">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.pair"></a></p>
+<h2 id="pair-method"><em>pair <sup>method</sup></em></h2>
+<p>Activates pairing mode of a device.</p>
+<h3 id="parameters_9">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_9">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_9">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">Failed to activate pairing</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_9">Example</h3>
+<h4 id="request_9">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.pair&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;
+    }
+}
+</code></pre>
+<h4 id="response_9">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.unpair"></a></p>
+<h2 id="unpair-method"><em>unpair <sup>method</sup></em></h2>
+<p>Unpairs a device.</p>
+<h3 id="parameters_10">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.device</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+<tr>
+<td align="left">params.bindid</td>
+<td align="left">string</td>
+<td align="left">Binding ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_10">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_10">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">Failed to unpair the device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_10">Example</h3>
+<h4 id="request_10">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.unpair&quot;,
+    &quot;params&quot;: {
+        &quot;device&quot;: &quot;DevInput&quot;,
+        &quot;bindid&quot;: &quot;id&quot;
+    }
+}
+</code></pre>
+<h4 id="response_10">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="head.Properties"></a></p>
+<h1 id="properties">Properties</h1>
+<p>The following properties are provided by the RemoteControl interface:</p>
+<p>RemoteControl interface properties:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#property.devices">devices</a> <sup>RO</sup></td>
+<td align="left">Names of all available devices</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.device">device</a> <sup>RO</sup></td>
+<td align="left">Metadata of a specific device</td>
+</tr>
+</tbody>
+</table>
+<p><a name="property.devices"></a></p>
+<h2 id="devices-property"><em>devices <sup>property</sup></em></h2>
+<p>Provides access to the names of all available devices.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(property)</td>
+<td align="left">array</td>
+<td align="left">Names of all available devices</td>
+</tr>
+<tr>
+<td align="left">(property)[#]</td>
+<td align="left">string</td>
+<td align="left">Device name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_11">Example</h3>
+<h4 id="get-request">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.devices&quot;
+}
+</code></pre>
+<h4 id="get-response">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: [
+        &quot;Web&quot;
+    ]
+}
+</code></pre>
+<p><a name="property.device"></a></p>
+<h2 id="device-property"><em>device <sup>property</sup></em></h2>
+<p>Provides access to the metadata of a specific device.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_1">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(property)</td>
+<td align="left">object</td>
+<td align="left">Metadata of a specific device</td>
+</tr>
+<tr>
+<td align="left">(property).metadata</td>
+<td align="left">string</td>
+<td align="left">Device metadata</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The <em>device</em> argument shall be passed as the index to the property, e.g. <em>RemoteControl.1.device@DevInput</em>.</p>
+</blockquote>
+<h3 id="errors_11">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">Metadata not supported on a virtual device</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Unknown device</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left"><code>ERROR_BAD_REQUEST</code></td>
+<td align="left">Bad JSON param data format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_12">Example</h3>
+<h4 id="get-request_1">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;RemoteControl.1.device@DevInput&quot;
+}
+</code></pre>
+<h4 id="get-response_1">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: {
+        &quot;metadata&quot;: &quot;It is based on protocol A&quot;
+    }
+}
+</code></pre>
+<p><a name="head.Notifications"></a></p>
+<h1 id="notifications">Notifications</h1>
+<p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
+<p>The following events are provided by the RemoteControl interface:</p>
+<p>RemoteControl interface events:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Event</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#event.keypressed">keypressed</a></td>
+<td align="left">Notifies of a key press/release action</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event.keypressed"></a></p>
+<h2 id="keypressed-event"><em>keypressed <sup>event</sup></em></h2>
+<p>Notifies of a key press/release action.</p>
+<h3 id="parameters_11">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.pressed</td>
+<td align="left">boolean</td>
+<td align="left">Denotes if the key was pressed (true) or released (false)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The <em>key code</em> argument shall be passed within the designator, e.g. <em>42.client.events.1</em>.</p>
+</blockquote>
+<h3 id="example_13">Example</h3>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;method&quot;: &quot;42.client.events.1.keypressed&quot;,
+    &quot;params&quot;: {
+        &quot;pressed&quot;: false
+    }
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

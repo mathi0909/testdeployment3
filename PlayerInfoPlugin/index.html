@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://mathi0909.github.io/testdeployment3/PlayerInfoPlugin/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>PlayerInfoPlugin - Documentation</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Player Info Plugin", url: "#_top", children: [
+              {title: "Table of Contents", url: "#table-of-contents" },
+          ]},
+          {title: "Introduction", url: "#introduction", children: [
+              {title: "Scope", url: "#scope" },
+              {title: "Case Sensitivity", url: "#case-sensitivity" },
+              {title: "Acronyms, Abbreviations and Terms", url: "#acronyms-abbreviations-and-terms" },
+              {title: "References", url: "#references" },
+          ]},
+          {title: "Description", url: "#description", children: [
+          ]},
+          {title: "Configuration", url: "#configuration", children: [
+          ]},
+          {title: "Methods", url: "#methods", children: [
+              {title: "audiocodecs method", url: "#audiocodecs-method" },
+              {title: "videocodecs method", url: "#videocodecs-method" },
+          ]},
+          {title: "Properties", url: "#properties", children: [
+              {title: "resolution property", url: "#resolution-property" },
+              {title: "isaudioequivalenceenabled property", url: "#isaudioequivalenceenabled-property" },
+              {title: "dolby_atmosmetadata property", url: "#dolby_atmosmetadata-property" },
+              {title: "dolby_soundmode property", url: "#dolby_soundmode-property" },
+              {title: "dolby_enableatmosoutput property", url: "#dolby_enableatmosoutput-property" },
+              {title: "dolby_mode property", url: "#dolby_mode-property" },
+          ]},
+          {title: "Notifications", url: "#notifications", children: [
+              {title: "dolby_audiomodechanged event", url: "#dolby_audiomodechanged-event" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <!-- Generated automatically, DO NOT EDIT! -->
+<p><a name="head.Player_Info_Plugin"></a></p>
+<h1 id="player-info-plugin">Player Info Plugin</h1>
+<p><strong>Version: 1.0</strong></p>
+<p><strong>Status: :black_circle::black_circle::white_circle:</strong></p>
+<p>PlayerInfo plugin for Thunder framework.</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#head.Introduction">Introduction</a></li>
+<li><a href="#head.Description">Description</a></li>
+<li><a href="#head.Configuration">Configuration</a></li>
+<li><a href="#head.Methods">Methods</a></li>
+<li><a href="#head.Properties">Properties</a></li>
+<li><a href="#head.Notifications">Notifications</a></li>
+</ul>
+<p><a name="head.Introduction"></a></p>
+<h1 id="introduction">Introduction</h1>
+<p><a name="head.Scope"></a></p>
+<h2 id="scope">Scope</h2>
+<p>This document describes purpose and functionality of the PlayerInfo plugin. It includes detailed specification about its configuration, methods and properties provided, as well as notifications sent.</p>
+<p><a name="head.Case_Sensitivity"></a></p>
+<h2 id="case-sensitivity">Case Sensitivity</h2>
+<p>All identifiers of the interfaces described in this document are case-sensitive. Thus, unless stated otherwise, all keywords, entities, properties, relations and actions should be treated as such.</p>
+<p><a name="head.Acronyms,_Abbreviations_and_Terms"></a></p>
+<h2 id="acronyms-abbreviations-and-terms">Acronyms, Abbreviations and Terms</h2>
+<p>The table below provides and overview of acronyms used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Acronym</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="acronym.API">API</a></td>
+<td align="left">Application Programming Interface</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.HTTP">HTTP</a></td>
+<td align="left">Hypertext Transfer Protocol</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON">JSON</a></td>
+<td align="left">JavaScript Object Notation; a data interchange format</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON-RPC">JSON-RPC</a></td>
+<td align="left">A remote procedure call protocol encoded in JSON</td>
+</tr>
+</tbody>
+</table>
+<p>The table below provides and overview of terms and abbreviations used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Term</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="term.callsign">callsign</a></td>
+<td align="left">The name given to an instance of a plugin. One plugin can be instantiated multiple times, but each instance the instance name, callsign, must be unique.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.References"></a></p>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Ref ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="ref.HTTP"><a href="http://www.w3.org/Protocols">HTTP</a></a></td>
+<td align="left">HTTP specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON-RPC"><a href="https://www.jsonrpc.org/specification">JSON-RPC</a></a></td>
+<td align="left">JSON-RPC 2.0 specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON"><a href="http://www.json.org/">JSON</a></a></td>
+<td align="left">JSON specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.Thunder"><a href="https://github.com/WebPlatformForEmbedded/Thunder/blob/master/doc/WPE%20-%20API%20-%20WPEFramework.docx">Thunder</a></a></td>
+<td align="left">Thunder API Reference</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.Description"></a></p>
+<h1 id="description">Description</h1>
+<p>The PlayerInfo plugin helps to get system supported Audio Video codecs.</p>
+<p>The plugin is designed to be loaded and executed within the Thunder framework. For more information about the framework refer to [<a href="#ref.Thunder">Thunder</a>].</p>
+<p><a name="head.Configuration"></a></p>
+<h1 id="configuration">Configuration</h1>
+<p>The table below lists configuration options of the plugin.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">callsign</td>
+<td align="left">string</td>
+<td align="left">Plugin instance name (default: <em>PlayerInfo</em>)</td>
+</tr>
+<tr>
+<td align="left">classname</td>
+<td align="left">string</td>
+<td align="left">Class name: <em>PlayerInfo</em></td>
+</tr>
+<tr>
+<td align="left">locator</td>
+<td align="left">string</td>
+<td align="left">Library name: <em>libWPEPlayerInfo.so</em></td>
+</tr>
+<tr>
+<td align="left">autostart</td>
+<td align="left">boolean</td>
+<td align="left">Determines if the plugin shall be started automatically along with the framework</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.Methods"></a></p>
+<h1 id="methods">Methods</h1>
+<p>The following methods are provided by the PlayerInfo plugin:</p>
+<p>PlayerProperties interface methods:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#method.audiocodecs">audiocodecs</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><a href="#method.videocodecs">videocodecs</a></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><a name="method.audiocodecs"></a></p>
+<h2 id="audiocodecs-method"><em>audiocodecs <sup>method</sup></em></h2>
+<h3 id="parameters">Parameters</h3>
+<p>This method takes no parameters.</p>
+<h3 id="result">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">codec</td>
+<td align="left">array</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">codec[#]</td>
+<td align="left">string</td>
+<td align="left">(must be one of the following: <em>AudioUndefined</em>, <em>AudioAac</em>, <em>AudioAc3</em>, <em>AudioAc3Plus</em>, <em>AudioDts</em>, <em>AudioMpeg1</em>, <em>AudioMpeg2</em>, <em>AudioMpeg3</em>, <em>AudioMpeg4</em>, <em>AudioOpus</em>, <em>AudioVorbisOgg</em>, <em>AudioWav</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.audiocodecs&quot;
+}
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: [
+        &quot;AudioUndefined&quot;
+    ]
+}
+</code></pre>
+<p><a name="method.videocodecs"></a></p>
+<h2 id="videocodecs-method"><em>videocodecs <sup>method</sup></em></h2>
+<h3 id="parameters_1">Parameters</h3>
+<p>This method takes no parameters.</p>
+<h3 id="result_1">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">codec</td>
+<td align="left">array</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">codec[#]</td>
+<td align="left">string</td>
+<td align="left">(must be one of the following: <em>VideoUndefined</em>, <em>VideoH263</em>, <em>VideoH264</em>, <em>VideoH265</em>, <em>VideoH26510</em>, <em>VideoMpeg</em>, <em>VideoVp8</em>, <em>VideoVp9</em>, <em>VideoVp10</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example</h3>
+<h4 id="request_1">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.videocodecs&quot;
+}
+</code></pre>
+<h4 id="response_1">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: [
+        &quot;VideoUndefined&quot;
+    ]
+}
+</code></pre>
+<p><a name="head.Properties"></a></p>
+<h1 id="properties">Properties</h1>
+<p>The following properties are provided by the PlayerInfo plugin:</p>
+<p>PlayerProperties interface properties:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#property.resolution">resolution</a> <sup>RO</sup></td>
+<td align="left">Current Video playback resolution</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.isaudioequivalenceenabled">isaudioequivalenceenabled</a> <sup>RO</sup></td>
+<td align="left">Checks Loudness Equivalence in platform</td>
+</tr>
+</tbody>
+</table>
+<p>Dolby Output interface properties:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#property.dolby_atmosmetadata">dolby atmosmetadata</a> <sup>RO</sup></td>
+<td align="left">Atmos capabilities of Sink</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.dolby_soundmode">dolby soundmode</a> <sup>RO</sup></td>
+<td align="left">Sound Mode - Mono/Stereo/Surround</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.dolby_enableatmosoutput">dolby enableatmosoutput</a> <sup>WO</sup></td>
+<td align="left">Enable Atmos Audio Output</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.dolby_mode">dolby mode</a></td>
+<td align="left">Dolby Mode</td>
+</tr>
+</tbody>
+</table>
+<p><a name="property.resolution"></a></p>
+<h2 id="resolution-property"><em>resolution <sup>property</sup></em></h2>
+<p>Provides access to the current Video playback resolution.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">res</td>
+<td align="left">string</td>
+<td align="left">resolution (must be one of the following: <em>ResolutionUnknown</em>, <em>Resolution480I24</em>, <em>Resolution480I25</em>, <em>Resolution480I30</em>, <em>Resolution480I50</em>, <em>Resolution480I</em>, <em>Resolution480P24</em>, <em>Resolution480P25</em>, <em>Resolution480P30</em>, <em>Resolution480P50</em>, <em>Resolution480P</em>, <em>Resolution576I24</em>, <em>Resolution576I25</em>, <em>Resolution576I30</em>, <em>Resolution576I50</em>, <em>Resolution576I</em>, <em>Resolution576P24</em>, <em>Resolution576P25</em>, <em>Resolution576P30</em>, <em>Resolution576P50</em>, <em>Resolution576P</em>, <em>Resolution720P24</em>, <em>Resolution720P25</em>, <em>Resolution720P30</em>, <em>Resolution720P50</em>, <em>Resolution720P</em>, <em>Resolution1080I24</em>, <em>Resolution1080I25</em>, <em>Resolution1080I30</em>, <em>Resolution1080I50</em>, <em>Resolution1080I</em>, <em>Resolution1080P24</em>, <em>Resolution1080P25</em>, <em>Resolution1080P30</em>, <em>Resolution1080P50</em>, <em>Resolution1080P</em>, <em>Resolution2160P24</em>, <em>Resolution2160P25</em>, <em>Resolution2160P30</em>, <em>Resolution2160P50</em>, <em>Resolution2160P60</em>, <em>Resolution2160P</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_2">Example</h3>
+<h4 id="get-request">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.resolution&quot;
+}
+</code></pre>
+<h4 id="get-response">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;ResolutionUnknown&quot;
+}
+</code></pre>
+<p><a name="property.isaudioequivalenceenabled"></a></p>
+<h2 id="isaudioequivalenceenabled-property"><em>isaudioequivalenceenabled <sup>property</sup></em></h2>
+<p>Provides access to the checks Loudness Equivalence in platform.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_1">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ae</td>
+<td align="left">boolean</td>
+<td align="left">enabled/disabled</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_3">Example</h3>
+<h4 id="get-request_1">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.isaudioequivalenceenabled&quot;
+}
+</code></pre>
+<h4 id="get-response_1">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: false
+}
+</code></pre>
+<p><a name="property.dolby_atmosmetadata"></a></p>
+<h2 id="dolby_atmosmetadata-property"><em>dolby_atmosmetadata <sup>property</sup></em></h2>
+<p>Provides access to the atmos capabilities of Sink.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_2">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">supported</td>
+<td align="left">boolean</td>
+<td align="left">Atmos capabilities of Sink</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_4">Example</h3>
+<h4 id="get-request_2">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.dolby_atmosmetadata&quot;
+}
+</code></pre>
+<h4 id="get-response_2">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: false
+}
+</code></pre>
+<p><a name="property.dolby_soundmode"></a></p>
+<h2 id="dolby_soundmode-property"><em>dolby_soundmode <sup>property</sup></em></h2>
+<p>Provides access to the sound Mode - Mono/Stereo/Surround.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_3">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">mode</td>
+<td align="left">string</td>
+<td align="left">Sound Mode - Mono/Stereo/Surround (must be one of the following: <em>Unknown</em>, <em>Mono</em>, <em>Stereo</em>, <em>Surround</em>, <em>Passthru</em>, <em>SoundmodeAuto</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_5">Example</h3>
+<h4 id="get-request_3">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.dolby_soundmode&quot;
+}
+</code></pre>
+<h4 id="get-response_3">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;Unknown&quot;
+}
+</code></pre>
+<p><a name="property.dolby_enableatmosoutput"></a></p>
+<h2 id="dolby_enableatmosoutput-property"><em>dolby_enableatmosoutput <sup>property</sup></em></h2>
+<p>Provides access to the enable Atmos Audio Output.</p>
+<blockquote>
+<p>This property is <strong>write-only</strong>.</p>
+</blockquote>
+<h3 id="value_4">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">enable</td>
+<td align="left">boolean</td>
+<td align="left">enable/disable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_6">Example</h3>
+<h4 id="set-request">Set Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.dolby_enableatmosoutput&quot;,
+    &quot;params&quot;: false
+}
+</code></pre>
+<h4 id="set-response">Set Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;null&quot;
+}
+</code></pre>
+<p><a name="property.dolby_mode"></a></p>
+<h2 id="dolby_mode-property"><em>dolby_mode <sup>property</sup></em></h2>
+<p>Provides access to the dolby Mode.</p>
+<h3 id="value_5">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">mode</td>
+<td align="left">string</td>
+<td align="left">dolby mode type (must be one of the following: <em>DigitalPcm</em>, <em>DigitalPlus</em>, <em>DigitalAc3</em>, <em>Auto</em>, <em>DigitalPassthrough</em>, <em>Ms12</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_7">Example</h3>
+<h4 id="get-request_4">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.dolby_mode&quot;
+}
+</code></pre>
+<h4 id="get-response_4">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;DigitalPcm&quot;
+}
+</code></pre>
+<h4 id="set-request_1">Set Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;PlayerInfo.1.dolby_mode&quot;,
+    &quot;params&quot;: &quot;DigitalPcm&quot;
+}
+</code></pre>
+<h4 id="set-response_1">Set Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;null&quot;
+}
+</code></pre>
+<p><a name="head.Notifications"></a></p>
+<h1 id="notifications">Notifications</h1>
+<p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
+<p>The following events are provided by the PlayerInfo plugin:</p>
+<p>Dolby Output interface events:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Event</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#event.dolby_audiomodechanged">dolby audiomodechanged</a></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><a name="event.dolby_audiomodechanged"></a></p>
+<h2 id="dolby_audiomodechanged-event"><em>dolby_audiomodechanged <sup>event</sup></em></h2>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.mode</td>
+<td align="left">string</td>
+<td align="left">(must be one of the following: <em>Unknown</em>, <em>Mono</em>, <em>Stereo</em>, <em>Surround</em>, <em>Passthru</em>, <em>SoundmodeAuto</em>)</td>
+</tr>
+<tr>
+<td align="left">params.enabled</td>
+<td align="left">boolean</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_8">Example</h3>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;method&quot;: &quot;client.events.1.dolby_audiomodechanged&quot;,
+    &quot;params&quot;: {
+        &quot;mode&quot;: &quot;Unknown&quot;,
+        &quot;enabled&quot;: false
+    }
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

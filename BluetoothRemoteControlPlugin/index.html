@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://mathi0909.github.io/testdeployment3/BluetoothRemoteControlPlugin/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>BluetoothRemoteControlPlugin - Documentation</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Bluetooth Remote Control Plugin", url: "#_top", children: [
+              {title: "Table of Contents", url: "#table-of-contents" },
+          ]},
+          {title: "Introduction", url: "#introduction", children: [
+              {title: "Scope", url: "#scope" },
+              {title: "Case Sensitivity", url: "#case-sensitivity" },
+              {title: "Acronyms, Abbreviations and Terms", url: "#acronyms-abbreviations-and-terms" },
+              {title: "References", url: "#references" },
+          ]},
+          {title: "Description", url: "#description", children: [
+          ]},
+          {title: "Configuration", url: "#configuration", children: [
+          ]},
+          {title: "Methods", url: "#methods", children: [
+              {title: "assign method", url: "#assign-method" },
+              {title: "revoke method", url: "#revoke-method" },
+          ]},
+          {title: "Properties", url: "#properties", children: [
+              {title: "name property", url: "#name-property" },
+              {title: "address property", url: "#address-property" },
+              {title: "info property", url: "#info-property" },
+              {title: "batterylevel property", url: "#batterylevel-property" },
+              {title: "voice property", url: "#voice-property" },
+              {title: "audioprofile property", url: "#audioprofile-property" },
+          ]},
+          {title: "Notifications", url: "#notifications", children: [
+              {title: "audiotransmission event", url: "#audiotransmission-event" },
+              {title: "audioframe event", url: "#audioframe-event" },
+              {title: "batterylevelchange event", url: "#batterylevelchange-event" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../CobaltPlugin/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../CobaltPlugin/" class="btn btn-xs btn-link">
+        CobaltPlugin
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../BluetoothControlPlugin/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../BluetoothControlPlugin/" class="btn btn-xs btn-link">
+        BluetoothControlPlugin
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <!-- Generated automatically, DO NOT EDIT! -->
+<p><a name="head.Bluetooth_Remote_Control_Plugin"></a></p>
+<h1 id="bluetooth-remote-control-plugin">Bluetooth Remote Control Plugin</h1>
+<p><strong>Version: 1.0</strong></p>
+<p><strong>Status: :black_circle::white_circle::white_circle:</strong></p>
+<p>BluetoothRemoteControl plugin for Thunder framework.</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#head.Introduction">Introduction</a></li>
+<li><a href="#head.Description">Description</a></li>
+<li><a href="#head.Configuration">Configuration</a></li>
+<li><a href="#head.Methods">Methods</a></li>
+<li><a href="#head.Properties">Properties</a></li>
+<li><a href="#head.Notifications">Notifications</a></li>
+</ul>
+<p><a name="head.Introduction"></a></p>
+<h1 id="introduction">Introduction</h1>
+<p><a name="head.Scope"></a></p>
+<h2 id="scope">Scope</h2>
+<p>This document describes purpose and functionality of the BluetoothRemoteControl plugin. It includes detailed specification about its configuration, methods and properties provided, as well as notifications sent.</p>
+<p><a name="head.Case_Sensitivity"></a></p>
+<h2 id="case-sensitivity">Case Sensitivity</h2>
+<p>All identifiers of the interfaces described in this document are case-sensitive. Thus, unless stated otherwise, all keywords, entities, properties, relations and actions should be treated as such.</p>
+<p><a name="head.Acronyms,_Abbreviations_and_Terms"></a></p>
+<h2 id="acronyms-abbreviations-and-terms">Acronyms, Abbreviations and Terms</h2>
+<p>The table below provides and overview of acronyms used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Acronym</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="acronym.API">API</a></td>
+<td align="left">Application Programming Interface</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.HTTP">HTTP</a></td>
+<td align="left">Hypertext Transfer Protocol</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON">JSON</a></td>
+<td align="left">JavaScript Object Notation; a data interchange format</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON-RPC">JSON-RPC</a></td>
+<td align="left">A remote procedure call protocol encoded in JSON</td>
+</tr>
+</tbody>
+</table>
+<p>The table below provides and overview of terms and abbreviations used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Term</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="term.callsign">callsign</a></td>
+<td align="left">The name given to an instance of a plugin. One plugin can be instantiated multiple times, but each instance the instance name, callsign, must be unique.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.References"></a></p>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Ref ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="ref.HTTP"><a href="http://www.w3.org/Protocols">HTTP</a></a></td>
+<td align="left">HTTP specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON-RPC"><a href="https://www.jsonrpc.org/specification">JSON-RPC</a></a></td>
+<td align="left">JSON-RPC 2.0 specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON"><a href="http://www.json.org/">JSON</a></a></td>
+<td align="left">JSON specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.Thunder"><a href="https://github.com/WebPlatformForEmbedded/Thunder/blob/master/doc/WPE%20-%20API%20-%20WPEFramework.docx">Thunder</a></a></td>
+<td align="left">Thunder API Reference</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.Description"></a></p>
+<h1 id="description">Description</h1>
+<p>The Bluetooth Remote Control plugin allows configuring and enabling Bluetooth remote control units.</p>
+<p>The plugin is designed to be loaded and executed within the Thunder framework. For more information about the framework refer to [<a href="#ref.Thunder">Thunder</a>].</p>
+<p><a name="head.Configuration"></a></p>
+<h1 id="configuration">Configuration</h1>
+<p>The table below lists configuration options of the plugin.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">callsign</td>
+<td align="left">string</td>
+<td align="left">Plugin instance name (default: <em>BluetoothRemoteControl</em>)</td>
+</tr>
+<tr>
+<td align="left">classname</td>
+<td align="left">string</td>
+<td align="left">Class name: <em>BluetoothRemoteControl</em></td>
+</tr>
+<tr>
+<td align="left">locator</td>
+<td align="left">string</td>
+<td align="left">Library name: <em>libWPEFrameworkBluetoothRemoteControl.so</em></td>
+</tr>
+<tr>
+<td align="left">autostart</td>
+<td align="left">boolean</td>
+<td align="left">Determines if the plugin shall be started automatically along with the framework</td>
+</tr>
+<tr>
+<td align="left">configuration</td>
+<td align="left">object</td>
+<td align="left"><sup><em>(optional)</em></sup></td>
+</tr>
+<tr>
+<td align="left">configuration?.controller</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Controller</td>
+</tr>
+<tr>
+<td align="left">configuration?.keymap</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Keymap</td>
+</tr>
+<tr>
+<td align="left">configuration?.keyingest</td>
+<td align="left">boolean</td>
+<td align="left"><sup><em>(optional)</em></sup> Enable keyingest</td>
+</tr>
+<tr>
+<td align="left">configuration?.recorder</td>
+<td align="left">enum</td>
+<td align="left"><sup><em>(optional)</em></sup> Recorder</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.Methods"></a></p>
+<h1 id="methods">Methods</h1>
+<p>The following methods are provided by the BluetoothRemoteControl plugin:</p>
+<p>BluetoothRemoteControl interface methods:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#method.assign">assign</a></td>
+<td align="left">Assigns a bluetooth device as a remote control unit</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.revoke">revoke</a></td>
+<td align="left">Revokes the current remote control assignment</td>
+</tr>
+</tbody>
+</table>
+<p><a name="method.assign"></a></p>
+<h2 id="assign-method"><em>assign <sup>method</sup></em></h2>
+<p>Assigns a bluetooth device as a remote control unit.</p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.address</td>
+<td align="left">string</td>
+<td align="left">Bluetooth address</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2</td>
+<td align="left"><code>ERROR_UNAVAILABLE</code></td>
+<td align="left">Bluetooth unavailable</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">Device unknown</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">Failed to assign the device</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.assign&quot;,
+    &quot;params&quot;: {
+        &quot;address&quot;: &quot;81:6F:B0:91:9B:FE&quot;
+    }
+}
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="method.revoke"></a></p>
+<h2 id="revoke-method"><em>revoke <sup>method</sup></em></h2>
+<p>Revokes the current remote control assignment.</p>
+<h3 id="parameters_1">Parameters</h3>
+<p>This method takes no parameters.</p>
+<h3 id="result_1">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_1">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">5</td>
+<td align="left"><code>ERROR_ILLEGAL_STATE</code></td>
+<td align="left">Remote not assigned</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example</h3>
+<h4 id="request_1">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.revoke&quot;
+}
+</code></pre>
+<h4 id="response_1">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+<p><a name="head.Properties"></a></p>
+<h1 id="properties">Properties</h1>
+<p>The following properties are provided by the BluetoothRemoteControl plugin:</p>
+<p>BluetoothRemoteControl interface properties:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#property.name">name</a> <sup>RO</sup></td>
+<td align="left">Unit name</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.address">address</a> <sup>RO</sup></td>
+<td align="left">Bluetooth address of the unit</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.info">info</a> <sup>RO</sup></td>
+<td align="left">Unit auxiliary information</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.batterylevel">batterylevel</a> <sup>RO</sup></td>
+<td align="left">Battery level</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.voice">voice</a></td>
+<td align="left">Enable or Disable the flow of Voice data fragments from the remote</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.audioprofile">audioprofile</a> <sup>RO</sup></td>
+<td align="left">Audio profile details</td>
+</tr>
+</tbody>
+</table>
+<p><a name="property.name"></a></p>
+<h2 id="name-property"><em>name <sup>property</sup></em></h2>
+<p>Provides access to the unit name.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(property)</td>
+<td align="left">string</td>
+<td align="left">Name of the remote control unit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_2">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">5</td>
+<td align="left"><code>ERROR_ILLEGAL_STATE</code></td>
+<td align="left">No remote has been assigned</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_2">Example</h3>
+<h4 id="get-request">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.name&quot;
+}
+</code></pre>
+<h4 id="get-response">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;Acme Bluetooth RCU&quot;
+}
+</code></pre>
+<p><a name="property.address"></a></p>
+<h2 id="address-property"><em>address <sup>property</sup></em></h2>
+<p>Provides access to the bluetooth address of the unit.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_1">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(property)</td>
+<td align="left">string</td>
+<td align="left">Bluetooth address</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_3">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">5</td>
+<td align="left"><code>ERROR_ILLEGAL_STATE</code></td>
+<td align="left">No remote has been assigned</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_3">Example</h3>
+<h4 id="get-request_1">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.address&quot;
+}
+</code></pre>
+<h4 id="get-response_1">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;81:6F:B0:91:9B:FE&quot;
+}
+</code></pre>
+<p><a name="property.info"></a></p>
+<h2 id="info-property"><em>info <sup>property</sup></em></h2>
+<p>Provides access to the unit auxiliary information.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_2">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(property)</td>
+<td align="left">object</td>
+<td align="left">Unit auxiliary information</td>
+</tr>
+<tr>
+<td align="left">(property)?.model</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Unit model name or number</td>
+</tr>
+<tr>
+<td align="left">(property)?.serial</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Unit serial number</td>
+</tr>
+<tr>
+<td align="left">(property)?.firmware</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Unit firmware revision</td>
+</tr>
+<tr>
+<td align="left">(property)?.software</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Unit software revision</td>
+</tr>
+<tr>
+<td align="left">(property)?.manufacturer</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Unit manufacturer name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_4">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">5</td>
+<td align="left"><code>ERROR_ILLEGAL_STATE</code></td>
+<td align="left">No remote has been assigned</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">Failed to retrieve information</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_4">Example</h3>
+<h4 id="get-request_2">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.info&quot;
+}
+</code></pre>
+<h4 id="get-response_2">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: {
+        &quot;model&quot;: &quot;Acme 1500 Plus&quot;,
+        &quot;serial&quot;: &quot;1234567890&quot;,
+        &quot;firmware&quot;: &quot;1.0&quot;,
+        &quot;software&quot;: &quot;1.0&quot;,
+        &quot;manufacturer&quot;: &quot;Acme Inc.&quot;
+    }
+}
+</code></pre>
+<p><a name="property.batterylevel"></a></p>
+<h2 id="batterylevel-property"><em>batterylevel <sup>property</sup></em></h2>
+<p>Provides access to the battery level.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_3">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(property)</td>
+<td align="left">number</td>
+<td align="left">Remote control unit's battery level in percentage</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_5">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">5</td>
+<td align="left"><code>ERROR_ILLEGAL_STATE</code></td>
+<td align="left">No remote has been assigned</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">Failed to retrieve battery level</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_5">Example</h3>
+<h4 id="get-request_3">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.batterylevel&quot;
+}
+</code></pre>
+<h4 id="get-response_3">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: 50
+}
+</code></pre>
+<p><a name="property.voice"></a></p>
+<h2 id="voice-property"><em>voice <sup>property</sup></em></h2>
+<p>Provides access to the enable or Disable the flow of Voice data fragments from the remote.</p>
+<h3 id="value_4">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(property)</td>
+<td align="left">boolean</td>
+<td align="left">enable (true) or disable (false) flow of voice data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_6">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><code>ERROR_GENERAL</code></td>
+<td align="left">Failed to set the voice flow</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_6">Example</h3>
+<h4 id="get-request_4">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.voice&quot;
+}
+</code></pre>
+<h4 id="get-response_4">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: false
+}
+</code></pre>
+<h4 id="set-request">Set Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.voice&quot;,
+    &quot;params&quot;: false
+}
+</code></pre>
+<h4 id="set-response">Set Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;null&quot;
+}
+</code></pre>
+<p><a name="property.audioprofile"></a></p>
+<h2 id="audioprofile-property"><em>audioprofile <sup>property</sup></em></h2>
+<p>Provides access to the audio profile details.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_5">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(property)</td>
+<td align="left">object</td>
+<td align="left">Audio profile details</td>
+</tr>
+<tr>
+<td align="left">(property).codec</td>
+<td align="left">string</td>
+<td align="left">Name of the audio codec (<em>pcm</em> for uncompressed audio) (must be one of the following: <em>PCM</em>, <em>ADPCM</em>)</td>
+</tr>
+<tr>
+<td align="left">(property).channels</td>
+<td align="left">number</td>
+<td align="left">Number of audio channels (1: mono, 2: stereo, etc.)</td>
+</tr>
+<tr>
+<td align="left">(property).rate</td>
+<td align="left">number</td>
+<td align="left">Sample rate (in Hz)</td>
+</tr>
+<tr>
+<td align="left">(property).resolution</td>
+<td align="left">number</td>
+<td align="left">Sample resolution (in bits per sample)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="errors_7">Errors</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Code</th>
+<th align="left">Message</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">5</td>
+<td align="left"><code>ERROR_ILLEGAL_STATE</code></td>
+<td align="left">No remote has been assigned</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left"><code>ERROR_UNKNOWN_KEY</code></td>
+<td align="left">The supplied audio profile is unknown</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_7">Example</h3>
+<h4 id="get-request_5">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;BluetoothRemoteControl.1.audioprofile&quot;
+}
+</code></pre>
+<h4 id="get-response_5">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: {
+        &quot;codec&quot;: &quot;ADPCM&quot;,
+        &quot;channels&quot;: 1,
+        &quot;rate&quot;: 16000,
+        &quot;resolution&quot;: 16
+    }
+}
+</code></pre>
+<p><a name="head.Notifications"></a></p>
+<h1 id="notifications">Notifications</h1>
+<p>Notifications are autonomous events, triggered by the internals of the implementation, and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
+<p>The following events are provided by the BluetoothRemoteControl plugin:</p>
+<p>BluetoothRemoteControl interface events:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Event</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#event.audiotransmission">audiotransmission</a></td>
+<td align="left">Notifies about audio data transmission</td>
+</tr>
+<tr>
+<td align="left"><a href="#event.audioframe">audioframe</a></td>
+<td align="left">Notifies about new audio data available</td>
+</tr>
+<tr>
+<td align="left"><a href="#event.batterylevelchange">batterylevelchange</a></td>
+<td align="left">Notifies about battery level changes</td>
+</tr>
+</tbody>
+</table>
+<p><a name="event.audiotransmission"></a></p>
+<h2 id="audiotransmission-event"><em>audiotransmission <sup>event</sup></em></h2>
+<p>Notifies about audio data transmission.</p>
+<h3 id="description_1">Description</h3>
+<p>Register to this event to be notified about audio transmission status</p>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params?.profile</td>
+<td align="left">string</td>
+<td align="left"><sup><em>(optional)</em></sup> Type of audio profile, marking start of transmission; empty in case of end of transmission</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_8">Example</h3>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;method&quot;: &quot;client.events.1.audiotransmission&quot;,
+    &quot;params&quot;: {
+        &quot;profile&quot;: &quot;pcm&quot;
+    }
+}
+</code></pre>
+<p><a name="event.audioframe"></a></p>
+<h2 id="audioframe-event"><em>audioframe <sup>event</sup></em></h2>
+<p>Notifies about new audio data available.</p>
+<h3 id="description_2">Description</h3>
+<p>Register to this event to be notified about audio data</p>
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params?.seq</td>
+<td align="left">number</td>
+<td align="left"><sup><em>(optional)</em></sup> Sequence number of the audio frame within current audio transmission</td>
+</tr>
+<tr>
+<td align="left">params.data</td>
+<td align="left">string</td>
+<td align="left">Base64 representation of the binary data of the audio frame; format of the data is specified by the audio profile denoted by the most recent <em>audiotransmission</em> notification</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_9">Example</h3>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;method&quot;: &quot;client.events.1.audioframe&quot;,
+    &quot;params&quot;: {
+        &quot;seq&quot;: 1,
+        &quot;data&quot;: &quot;yKMHiYh6qJiDspB6S7ihlKOAbivApYEQDCgY0aECCQhpkAqZogP1ECk9GbHGEAkwG8Ax8wArgaAtEMjGQIoYCKKgGCuzBSA/iuWkKEwamLKzOKoCeR2hwQQZKqgBKKqELoGQwQ==&quot;
+    }
+}
+</code></pre>
+<p><a name="event.batterylevelchange"></a></p>
+<h2 id="batterylevelchange-event"><em>batterylevelchange <sup>event</sup></em></h2>
+<p>Notifies about battery level changes.</p>
+<h3 id="description_3">Description</h3>
+<p>Register to this event to be notified about battery level drops</p>
+<h3 id="parameters_4">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.level</td>
+<td align="left">number</td>
+<td align="left">Battery level (in percentage)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_10">Example</h3>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;method&quot;: &quot;client.events.1.batterylevelchange&quot;,
+    &quot;params&quot;: {
+        &quot;level&quot;: 50
+    }
+}
+</code></pre>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../CobaltPlugin/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../CobaltPlugin/" class="btn btn-xs btn-link">
+        CobaltPlugin
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../BluetoothControlPlugin/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../BluetoothControlPlugin/" class="btn btn-xs btn-link">
+        BluetoothControlPlugin
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

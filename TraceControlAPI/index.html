@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://mathi0909.github.io/testdeployment3/TraceControlAPI/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>TraceControlAPI - Documentation</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Trace Control API", url: "#_top", children: [
+              {title: "Table of Contents", url: "#table-of-contents" },
+          ]},
+          {title: "Introduction", url: "#introduction", children: [
+              {title: "Scope", url: "#scope" },
+              {title: "Case Sensitivity", url: "#case-sensitivity" },
+              {title: "Acronyms, Abbreviations and Terms", url: "#acronyms-abbreviations-and-terms" },
+              {title: "References", url: "#references" },
+          ]},
+          {title: "Description", url: "#description", children: [
+          ]},
+          {title: "Methods", url: "#methods", children: [
+              {title: "status method", url: "#status-method" },
+              {title: "set method", url: "#set-method" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <!-- Generated automatically, DO NOT EDIT! -->
+<p><a name="head.Trace_Control_API"></a></p>
+<h1 id="trace-control-api">Trace Control API</h1>
+<p><strong>Version: 1.0</strong></p>
+<p><strong>Status: :black_circle::white_circle::white_circle:</strong></p>
+<p>TraceControl interface for Thunder framework.</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#head.Introduction">Introduction</a></li>
+<li><a href="#head.Description">Description</a></li>
+<li><a href="#head.Methods">Methods</a></li>
+</ul>
+<p><a name="head.Introduction"></a></p>
+<h1 id="introduction">Introduction</h1>
+<p><a name="head.Scope"></a></p>
+<h2 id="scope">Scope</h2>
+<p>This document describes purpose and functionality of the TraceControl interface. It includes detailed specification about its methods provided.</p>
+<p><a name="head.Case_Sensitivity"></a></p>
+<h2 id="case-sensitivity">Case Sensitivity</h2>
+<p>All identifiers of the interfaces described in this document are case-sensitive. Thus, unless stated otherwise, all keywords, entities, properties, relations and actions should be treated as such.</p>
+<p><a name="head.Acronyms,_Abbreviations_and_Terms"></a></p>
+<h2 id="acronyms-abbreviations-and-terms">Acronyms, Abbreviations and Terms</h2>
+<p>The table below provides and overview of acronyms used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Acronym</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="acronym.API">API</a></td>
+<td align="left">Application Programming Interface</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.HTTP">HTTP</a></td>
+<td align="left">Hypertext Transfer Protocol</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON">JSON</a></td>
+<td align="left">JavaScript Object Notation; a data interchange format</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON-RPC">JSON-RPC</a></td>
+<td align="left">A remote procedure call protocol encoded in JSON</td>
+</tr>
+</tbody>
+</table>
+<p>The table below provides and overview of terms and abbreviations used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Term</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="term.callsign">callsign</a></td>
+<td align="left">The name given to an instance of a plugin. One plugin can be instantiated multiple times, but each instance the instance name, callsign, must be unique.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.References"></a></p>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Ref ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="ref.HTTP"><a href="http://www.w3.org/Protocols">HTTP</a></a></td>
+<td align="left">HTTP specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON-RPC"><a href="https://www.jsonrpc.org/specification">JSON-RPC</a></a></td>
+<td align="left">JSON-RPC 2.0 specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON"><a href="http://www.json.org/">JSON</a></a></td>
+<td align="left">JSON specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.Thunder"><a href="https://github.com/WebPlatformForEmbedded/Thunder/blob/master/doc/WPE%20-%20API%20-%20WPEFramework.docx">Thunder</a></a></td>
+<td align="left">Thunder API Reference</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.Description"></a></p>
+<h1 id="description">Description</h1>
+<p>TraceControl JSON-RPC interface.</p>
+<p><a name="head.Methods"></a></p>
+<h1 id="methods">Methods</h1>
+<p>The following methods are provided by the TraceControl interface:</p>
+<p>TraceControl interface methods:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#method.status">status</a></td>
+<td align="left">Retrieves general information</td>
+</tr>
+<tr>
+<td align="left"><a href="#method.set">set</a></td>
+<td align="left">Sets traces</td>
+</tr>
+</tbody>
+</table>
+<p><a name="method.status"></a></p>
+<h2 id="status-method"><em>status <sup>method</sup></em></h2>
+<p>Retrieves general information.</p>
+<h3 id="description_1">Description</h3>
+<p>Retrieves the actual trace status information for targeted module and category, if either category nor module is given, all information is returned. It will retrieves the details about console status and remote address(port and binding address), if these are configured.</p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.module</td>
+<td align="left">string</td>
+<td align="left">Module name</td>
+</tr>
+<tr>
+<td align="left">params.category</td>
+<td align="left">string</td>
+<td align="left">Category name</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">result.console</td>
+<td align="left">boolean</td>
+<td align="left">Config attribute (Console)</td>
+</tr>
+<tr>
+<td align="left">result.remote</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">result.remote.port</td>
+<td align="left">number</td>
+<td align="left">Config attribute (port)</td>
+</tr>
+<tr>
+<td align="left">result.remote.binding</td>
+<td align="left">string</td>
+<td align="left">Config attribute (binding)</td>
+</tr>
+<tr>
+<td align="left">result.settings</td>
+<td align="left">array</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">result.settings[#]</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">result.settings[#].module</td>
+<td align="left">string</td>
+<td align="left">Module name</td>
+</tr>
+<tr>
+<td align="left">result.settings[#].category</td>
+<td align="left">string</td>
+<td align="left">Category name</td>
+</tr>
+<tr>
+<td align="left">result.settings[#].state</td>
+<td align="left">string</td>
+<td align="left">State value (must be one of the following: <em>enabled</em>, <em>disabled</em>, <em>tristated</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;TraceControl.1.status&quot;,
+    &quot;params&quot;: {
+        &quot;module&quot;: &quot;Plugin_Monitor&quot;,
+        &quot;category&quot;: &quot;Information&quot;
+    }
+}
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: {
+        &quot;console&quot;: false,
+        &quot;remote&quot;: {
+            &quot;port&quot;: 2200,
+            &quot;binding&quot;: &quot;0.0.0.0&quot;
+        },
+        &quot;settings&quot;: [
+            {
+                &quot;module&quot;: &quot;Plugin_Monitor&quot;,
+                &quot;category&quot;: &quot;Information&quot;,
+                &quot;state&quot;: &quot;disabled&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<p><a name="method.set"></a></p>
+<h2 id="set-method"><em>set <sup>method</sup></em></h2>
+<p>Sets traces.</p>
+<h3 id="description_2">Description</h3>
+<p>Disables/enables all/select category traces for particular module.</p>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">params</td>
+<td align="left">object</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">params.module</td>
+<td align="left">string</td>
+<td align="left">Module name</td>
+</tr>
+<tr>
+<td align="left">params.category</td>
+<td align="left">string</td>
+<td align="left">Category name</td>
+</tr>
+<tr>
+<td align="left">params.state</td>
+<td align="left">string</td>
+<td align="left">State value (must be one of the following: <em>enabled</em>, <em>disabled</em>, <em>tristated</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_1">Result</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">result</td>
+<td align="left">null</td>
+<td align="left">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example</h3>
+<h4 id="request_1">Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;TraceControl.1.set&quot;,
+    &quot;params&quot;: {
+        &quot;module&quot;: &quot;Plugin_Monitor&quot;,
+        &quot;category&quot;: &quot;Information&quot;,
+        &quot;state&quot;: &quot;disabled&quot;
+    }
+}
+</code></pre>
+<h4 id="response_1">Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: null
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

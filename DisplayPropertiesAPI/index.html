@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://mathi0909.github.io/testdeployment3/DisplayPropertiesAPI/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>DisplayPropertiesAPI - Documentation</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "DisplayProperties API", url: "#_top", children: [
+              {title: "Table of Contents", url: "#table-of-contents" },
+          ]},
+          {title: "Introduction", url: "#introduction", children: [
+              {title: "Scope", url: "#scope" },
+              {title: "Case Sensitivity", url: "#case-sensitivity" },
+              {title: "Acronyms, Abbreviations and Terms", url: "#acronyms-abbreviations-and-terms" },
+              {title: "References", url: "#references" },
+          ]},
+          {title: "Description", url: "#description", children: [
+          ]},
+          {title: "Properties", url: "#properties", children: [
+              {title: "colorspace property", url: "#colorspace-property" },
+              {title: "framerate property", url: "#framerate-property" },
+              {title: "colourdepth property", url: "#colourdepth-property" },
+              {title: "colorimetry property", url: "#colorimetry-property" },
+              {title: "quantizationrange property", url: "#quantizationrange-property" },
+              {title: "eotf property", url: "#eotf-property" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+
+    <!-- Generated automatically, DO NOT EDIT! -->
+<p><a name="head.DisplayProperties_API"></a></p>
+<h1 id="displayproperties-api">DisplayProperties API</h1>
+<p><strong>Version: 1.0</strong></p>
+<p><strong>Status: :black_circle::white_circle::white_circle:</strong></p>
+<p>DisplayProperties interface for Thunder framework.</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#head.Introduction">Introduction</a></li>
+<li><a href="#head.Description">Description</a></li>
+<li><a href="#head.Properties">Properties</a></li>
+</ul>
+<p><a name="head.Introduction"></a></p>
+<h1 id="introduction">Introduction</h1>
+<p><a name="head.Scope"></a></p>
+<h2 id="scope">Scope</h2>
+<p>This document describes purpose and functionality of the DisplayProperties interface. It includes detailed specification about its properties provided.</p>
+<p><a name="head.Case_Sensitivity"></a></p>
+<h2 id="case-sensitivity">Case Sensitivity</h2>
+<p>All identifiers of the interfaces described in this document are case-sensitive. Thus, unless stated otherwise, all keywords, entities, properties, relations and actions should be treated as such.</p>
+<p><a name="head.Acronyms,_Abbreviations_and_Terms"></a></p>
+<h2 id="acronyms-abbreviations-and-terms">Acronyms, Abbreviations and Terms</h2>
+<p>The table below provides and overview of acronyms used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Acronym</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="acronym.API">API</a></td>
+<td align="left">Application Programming Interface</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.HTTP">HTTP</a></td>
+<td align="left">Hypertext Transfer Protocol</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON">JSON</a></td>
+<td align="left">JavaScript Object Notation; a data interchange format</td>
+</tr>
+<tr>
+<td align="left"><a name="acronym.JSON-RPC">JSON-RPC</a></td>
+<td align="left">A remote procedure call protocol encoded in JSON</td>
+</tr>
+</tbody>
+</table>
+<p>The table below provides and overview of terms and abbreviations used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Term</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="term.callsign">callsign</a></td>
+<td align="left">The name given to an instance of a plugin. One plugin can be instantiated multiple times, but each instance the instance name, callsign, must be unique.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.References"></a></p>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Ref ID</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a name="ref.HTTP"><a href="http://www.w3.org/Protocols">HTTP</a></a></td>
+<td align="left">HTTP specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON-RPC"><a href="https://www.jsonrpc.org/specification">JSON-RPC</a></a></td>
+<td align="left">JSON-RPC 2.0 specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.JSON"><a href="http://www.json.org/">JSON</a></a></td>
+<td align="left">JSON specification</td>
+</tr>
+<tr>
+<td align="left"><a name="ref.Thunder"><a href="https://github.com/WebPlatformForEmbedded/Thunder/blob/master/doc/WPE%20-%20API%20-%20WPEFramework.docx">Thunder</a></a></td>
+<td align="left">Thunder API Reference</td>
+</tr>
+</tbody>
+</table>
+<p><a name="head.Description"></a></p>
+<h1 id="description">Description</h1>
+<p>DisplayProperties JSON-RPC interface.</p>
+<p><a name="head.Properties"></a></p>
+<h1 id="properties">Properties</h1>
+<p>The following properties are provided by the DisplayProperties interface:</p>
+<p>DisplayProperties interface properties:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="#property.colorspace">colorspace</a> <sup>RO</sup></td>
+<td align="left">Provides access to the display's Colour space (chroma subsampling format)</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.framerate">framerate</a> <sup>RO</sup></td>
+<td align="left">Provides access to Frame Rate</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.colourdepth">colourdepth</a> <sup>RO</sup></td>
+<td align="left">Provides access to display's colour Depth</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.colorimetry">colorimetry</a> <sup>RO</sup></td>
+<td align="left">Provides access to display's colorimetry</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.quantizationrange">quantizationrange</a> <sup>RO</sup></td>
+<td align="left">Provides access to display's Qauntization Range</td>
+</tr>
+<tr>
+<td align="left"><a href="#property.eotf">eotf</a> <sup>RO</sup></td>
+<td align="left">Provides access to display's Electro optical transfer function</td>
+</tr>
+</tbody>
+</table>
+<p><a name="property.colorspace"></a></p>
+<h2 id="colorspace-property"><em>colorspace <sup>property</sup></em></h2>
+<p>Provides access to the provides access to the display's Colour space (chroma subsampling format).</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">cs</td>
+<td align="left">string</td>
+<td align="left">colour space (must be one of the following: <em>FormatUnknown</em>, <em>FormatOther</em>, <em>FormatRgb444</em>, <em>FormatYcbcr444</em>, <em>FormatYcbcr422</em>, <em>FormatYcbcr420</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<h4 id="get-request">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;DisplayProperties.1.colorspace&quot;
+}
+</code></pre>
+<h4 id="get-response">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;FormatUnknown&quot;
+}
+</code></pre>
+<p><a name="property.framerate"></a></p>
+<h2 id="framerate-property"><em>framerate <sup>property</sup></em></h2>
+<p>Provides access to the provides access to Frame Rate.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_1">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">rate</td>
+<td align="left">string</td>
+<td align="left">frame rate (must be one of the following: <em>FramerateUnknown</em>, <em>Framerate23976</em>, <em>Framerate24</em>, <em>Framerate25</em>, <em>Framerate2997</em>, <em>Framerate30</em>, <em>Framerate47952</em>, <em>Framerate48</em>, <em>Framerate50</em>, <em>Framerate5994</em>, <em>Framerate60</em>, <em>Framerate11988</em>, <em>Framerate120</em>, <em>Framerate144</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example</h3>
+<h4 id="get-request_1">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;DisplayProperties.1.framerate&quot;
+}
+</code></pre>
+<h4 id="get-response_1">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;FramerateUnknown&quot;
+}
+</code></pre>
+<p><a name="property.colourdepth"></a></p>
+<h2 id="colourdepth-property"><em>colourdepth <sup>property</sup></em></h2>
+<p>Provides access to the provides access to display's colour Depth.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_2">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">colour</td>
+<td align="left">string</td>
+<td align="left">colour depth (must be one of the following: <em>ColordepthUnknown</em>, <em>Colordepth8Bit</em>, <em>Colordepth10Bit</em>, <em>Colordepth12Bit</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_2">Example</h3>
+<h4 id="get-request_2">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;DisplayProperties.1.colourdepth&quot;
+}
+</code></pre>
+<h4 id="get-response_2">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;ColordepthUnknown&quot;
+}
+</code></pre>
+<p><a name="property.colorimetry"></a></p>
+<h2 id="colorimetry-property"><em>colorimetry <sup>property</sup></em></h2>
+<p>Provides access to the provides access to display's colorimetry.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_3">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">colorimetry</td>
+<td align="left">array</td>
+<td align="left">display colorimetry</td>
+</tr>
+<tr>
+<td align="left">colorimetry[#]</td>
+<td align="left">string</td>
+<td align="left">(must be one of the following: <em>ColorimetryUnknown</em>, <em>ColorimetryOther</em>, <em>ColorimetrySmpte170M</em>, <em>ColorimetryBt709</em>, <em>ColorimetryXvycc601</em>, <em>ColorimetryXvycc709</em>, <em>ColorimetrySycc601</em>, <em>ColorimetryOpycc601</em>, <em>ColorimetryOprgb</em>, <em>ColorimetryBt2020Yccbcbrc</em>, <em>ColorimetryBt2020RgbYcbcr</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_3">Example</h3>
+<h4 id="get-request_3">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;DisplayProperties.1.colorimetry&quot;
+}
+</code></pre>
+<h4 id="get-response_3">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: [
+        &quot;ColorimetryUnknown&quot;
+    ]
+}
+</code></pre>
+<p><a name="property.quantizationrange"></a></p>
+<h2 id="quantizationrange-property"><em>quantizationrange <sup>property</sup></em></h2>
+<p>Provides access to the provides access to display's Qauntization Range.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_4">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">qr</td>
+<td align="left">string</td>
+<td align="left">quantization range (must be one of the following: <em>QuantizationrangeUnknown</em>, <em>QuantizationrangeLimited</em>, <em>QuantizationrangeFull</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_4">Example</h3>
+<h4 id="get-request_4">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;DisplayProperties.1.quantizationrange&quot;
+}
+</code></pre>
+<h4 id="get-response_4">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;QuantizationrangeUnknown&quot;
+}
+</code></pre>
+<p><a name="property.eotf"></a></p>
+<h2 id="eotf-property"><em>eotf <sup>property</sup></em></h2>
+<p>Provides access to the provides access to display's Electro optical transfer function.</p>
+<blockquote>
+<p>This property is <strong>read-only</strong>.</p>
+</blockquote>
+<h3 id="value_5">Value</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">eotf</td>
+<td align="left">string</td>
+<td align="left">display's EOTF (must be one of the following: <em>EotfUnknown</em>, <em>EotfOther</em>, <em>EotfBt1886</em>, <em>EotfBt2100</em>, <em>EotfSmpteSt2084</em>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_5">Example</h3>
+<h4 id="get-request_5">Get Request</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;method&quot;: &quot;DisplayProperties.1.eotf&quot;
+}
+</code></pre>
+<h4 id="get-response_5">Get Response</h4>
+<pre><code class="language-json">{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 42,
+    &quot;result&quot;: &quot;EotfUnknown&quot;
+}
+</code></pre>
+
+  <br>
+    
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
